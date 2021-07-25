@@ -7,25 +7,130 @@
 		position: relative;
 		width: 1080px;
 		margin: auto;
+		border: 1px solid red;
 
-		.centerImg {
+		.contentImg {
 			width: 100%;
 			padding-top: 50.9%;
 			background: url(~@media/omni/higherLevelAutoDriving@2x.png) no-repeat;
 			background-size: cover;
 		}
 
-
+		.contentList {
+			border: 1px solid green;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 70px 70px 0;
+		}
 	}
 
 	@media screen and(max-width: 750px) {
 		padding-top: 6.2%;
 		padding-bottom: 4.4%;
-		.content{
+		.content {
 			width: 84%;
-			.centerImg {
+
+			.contentImg {
 				background-image: url(~@media/omni/higherLevelAutoDriving.png);
 			}
+
+			.contentList {
+				padding: .4rem .4rem;
+			}
+		}
+	}
+}
+
+//  赋能更高级别自动驾驶 的每一行
+.contentRows {
+	background: rgba(214, 167, 255, 0.36);
+	display: flex;
+	justify-content: space-between;
+	height: 142px;
+	font-size: 14px;
+
+	&.spaceAround {
+		padding: 0 2.2em;
+	}
+
+	@media screen and(max-width: 750px) {
+		height: .83rem;
+		font-size: .14rem;
+		&.spaceAround {
+			padding: 0 1.4em;
+		}
+	}
+}
+
+//  赋能更高级别自动驾驶 的每一个
+.contentCol {
+	background: rgba(0, 0, 0, .2);
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+
+	//  图片
+	.contentColImg {
+		width: 60px;
+		height: 60px;
+		background: rgba(0, 0, 0, .2);
+	}
+
+	//  间隔
+	.contentAround {
+		width: 1.01em;
+	}
+
+	//  文字
+	.contentText {
+		.contentTitle {
+			font-size: 18px;
+			color: var(--color06f);
+			font-weight: bold;
+			padding-bottom: .2em;
+		}
+
+		.contentDesc {
+			line-height: 1.3em;
+			letter-spacing: -.04em;
+		}
+	}
+
+	//  是右侧的按个块
+	&.directionRight {
+		flex-direction: row-reverse;
+
+		.contentText {
+			text-align: right;
+		}
+	}
+
+	@media screen and(max-width: 750px) {
+		.contentColImg {
+			width: 2.2em;
+			height: 2.2em;
+		}
+
+		//  文字
+		.contentText {
+			.contentTitle {
+				font-size: .7em;
+				padding-bottom: .05rem;
+			}
+
+			.contentDesc {
+				font-size: 0.4em;
+				padding-bottom: .05rem;
+				line-height: 1.4em;
+			}
+		}
+		//  间隔
+		.contentAround {
+			width: .13rem;
 		}
 	}
 }
