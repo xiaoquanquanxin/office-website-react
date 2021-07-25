@@ -62,4 +62,5 @@ export const pathNameList = [
     'sunrise2.html',
     'sunrise3.html',
     'technology.html',
+    'omni.html'
 ];
