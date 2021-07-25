@@ -1,0 +1,161 @@
+.prodHighLights {
+	background-color: #fff;
+	padding: 70px 60px;
+
+	.prodHighLightsIn {
+		margin: 0 auto;
+		width: 952px;
+
+		.phList {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin-top: 58px;
+
+			.phItem {
+				width: 33.3333%;
+				-ms-flex-negative: 0;
+				flex-shrink: 0;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+
+				.phItemImg {
+					width: 60px;
+					margin-right: 11px;
+					vertical-align: top;
+					-ms-flex-item-align: baseline;
+					align-self: baseline;
+				}
+
+				.nameDesc {
+					.name {
+						font-size: 24px;
+						font-weight: 500;
+						color: rgba(0, 0, 0, 0.8);
+						line-height: 1.375;
+					}
+
+					.desc {
+						font-size: 14px;
+						font-weight: 400;
+						color: rgba(0, 0, 0, .6);
+						line-height: 1.7142;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and  (max-width: 750px) {
+		& {
+			padding: 0 0.2rem 0.3rem;
+
+			.prodHighLightsIn {
+				width: 100%;
+
+				.phList {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					flex-wrap: wrap;
+					margin-top: 0.7rem;
+
+					.phItem {
+						width: 50%;
+						padding: 0.3rem 0.4rem;
+						
+						.phItemImg {
+							width: 0.72rem;
+							margin-right: 0.14rem;
+							-ms-flex-negative: 0;
+							flex-shrink: 0;
+							-ms-flex-item-align: baseline;
+							align-self: baseline;
+						}
+
+						.nameDesc {
+							flex: 1;
+							.name {
+								font-size: 0.28rem;
+							}
+
+							.desc {
+								width: 150%;
+								font-size: 0.24rem;
+								transform: scale(0.67);
+								transform-origin: left;
+								margin-top: -0.1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.highLightsImgs {
+	overflow: hidden;
+
+	.imgCenter2 {
+		width: 50%;
+		padding-top: 33.828125%;
+		float: left;
+		position: relative;
+		&:nth-of-type(odd) {
+			background-position: right center;
+		}
+		&:nth-of-type(even) {
+			background-position: left center;
+		}
+
+		.titleDesc {
+			left: 0;
+			top: 0;
+			padding: 40px 0 0 50px;
+			position: absolute;
+
+			.title {
+				font-size: 28px;
+				font-weight: 500;
+				color: #fff;
+				line-height: 1.4285;
+			}
+
+			.desc {
+				font-size: 16px;
+				font-weight: 400;
+				color: rgba(255, 255, 255, .9);
+				line-height: 1.375;
+			}
+		}
+	}
+
+	@media screen and  (max-width: 750px) {
+		& {
+			.imgCenter2 {
+				width: 50%;
+				height: 3.68rem;
+				padding-top: 0;
+				float: left;
+
+				.titleDesc {
+					left: 0;
+					top: 0;
+					padding: 0.4rem 0 0 0.4rem;
+
+					.title {
+						font-size: 0.24rem;
+					}
+
+					.desc {
+						font-size: 0.24rem;
+						transform: scale(0.67);
+						transform-origin: left;
+					}
+				}
+			}
+		}
+	}
+}

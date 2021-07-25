@@ -1,0 +1,87 @@
+//	链接list
+.linkList {
+	width: 664px;
+	//	链接项
+	.linkItem {
+		width: 25%;
+		//	链接描述
+		.linkItemPar {
+			color: var(--white);
+			font-size: 16px;
+			line-height: 2;
+			margin-bottom: 10px;
+			//	箭头
+			.curr {
+				transition: transform .3s;
+				//	展开的箭头，渲染180度
+				&.isSpread {
+					transform: rotateZ(180deg);
+				}
+			}
+		}
+
+
+		//	链接
+		.link {
+			transition: color .3s;
+
+			&:hover {
+				color: var(--white);
+			}
+		}
+
+		//	无链接
+		.noLinking {
+
+		}
+
+		.link, .noLinking {
+			width: 100%;
+			margin: 6px 0;
+			white-space: nowrap;
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+}
+
+@media screen and (max-width: 750px) {
+	.linkList {
+
+		width: 100%;
+		border-bottom: .01rem solid rgba(255, 255, 255, 0.1);
+		margin: auto;
+	
+		.linkItem {
+			width: 100%;
+			border-top: .01rem solid rgba(255, 255, 255, 0.1);
+			//padding-left: 0;
+	
+			.linkItemPar {
+				line-height: 1rem;
+				position: relative;
+				font-size: .26rem;
+				margin-bottom: 0;
+	
+				.curr {
+					position: absolute;
+					top: .36rem;
+					right: .16rem;
+					width: .24rem;
+				}
+			}
+	
+			.linkWrap {
+				line-height: 1rem;
+				margin-left: .2rem;
+	
+				.link, .noLinking {
+					margin: 0;
+					border-top: .01rem solid rgba(255, 255, 255, 0.1);
+					font-size: .26rem;
+				}
+			}
+		}
+	}
+}
+

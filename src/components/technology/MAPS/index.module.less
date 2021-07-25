@@ -1,0 +1,182 @@
+.assessment {
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: cover;
+	background-image: url(~@media/technology/bg-pinggu.jpg);
+
+	.assessmentIn {
+		margin: 0 auto;
+		width: 1280px;
+		padding: 60px 0 46px 100px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		.titleDescBtn {
+			.title {
+				font-size: 30px;
+				font-weight: 500;
+				color: #fff;
+				line-height: 1.66666;
+			}
+
+			.descBtn {
+				text-align: center;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: reverse;
+				-ms-flex-direction: row-reverse;
+				flex-direction: row-reverse;
+				-webkit-box-align: start;
+				-ms-flex-align: start;
+				align-items: flex-start;
+				padding-top: 16px;
+
+				.desc {
+					width: 590px;
+					font-size: 16px;
+					font-weight: 400;
+					color: rgba(255, 255, 255, .7);
+					line-height: 1.625;
+					position: relative;
+					text-align: left;
+
+					.content {
+						//width: 490px;
+						display: -webkit-inline-box;
+						display: -ms-inline-flexbox;
+						display: inline-flex;
+						overflow: hidden;
+						max-height: 26px;
+						white-space: nowrap;
+
+						&.active {
+							display: inline;
+							white-space: normal;
+							max-height: none;
+						}
+					}
+
+					.btn {
+						font-size: 16px;
+						color: #0066FF;
+						line-height: 1.625;
+						display: -webkit-inline-box;
+						display: -ms-inline-flexbox;
+						display: inline-flex;
+						-webkit-box-align: center;
+						-ms-flex-align: center;
+						align-items: center;
+						white-space: nowrap;
+						cursor: pointer;
+						position: relative;
+
+						.open {
+							visibility: visible;
+
+						}
+
+						.close {
+							visibility: visible;
+						}
+
+						.arrow {
+							width: 20px;
+							height: 20px;
+							background: url(~@media/technology/arrow.png);
+							background-size: 100% 100%;
+							-webkit-transition: -webkit-transform 0.5s ease;
+							transition: -webkit-transform 0.5s ease;
+							transition: transform 0.5s ease;
+							transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+							position: relative;
+						}
+					}
+				}
+			}
+		}
+
+		.chartDescItem {
+			.img {
+				margin: 0;
+				width: 504px;
+				vertical-align: top;
+			}
+		}
+
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			display: none;
+			.assessmentIn {
+				margin: 0 auto;
+				width: 100%;
+				padding: 0.6rem 0.2rem;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+
+				.titleDescBtn {
+					padding: 0 0.2rem;
+
+					.title {
+						font-size: 0.3rem;
+					}
+
+					.descBtn {
+						padding-top: 0.16rem;
+						-webkit-box-pack: end;
+						-ms-flex-pack: end;
+						justify-content: flex-end;
+
+						.desc {
+							width: 6rem;
+							font-size: 0.16rem;
+							text-align: left;
+
+							.content {
+								//width: 4.9rem;
+								max-height: .26rem;
+							}
+
+							.btn {
+								font-size: 0.16rem;
+
+								.open {
+								}
+
+								.close {
+								}
+
+								.arrow {
+									width: 0.2rem;
+									height: 0.2rem;
+								}
+							}
+						}
+					}
+				}
+
+				.chartDescItem {
+					.img {
+						width: 6.7rem;
+						margin: 0.2rem auto 0;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,147 @@
+//	主要内容
+.siteInfo {
+	background: var(--color252525);
+	color: var(--colorddd);
+	line-height: 44px;
+	//	框
+	.siteInfoInner {
+		padding: 50px 100px;
+		box-sizing: border-box;
+		margin: auto;
+		width: 100%;
+		max-width: 1280px;
+		//	按钮组
+		.buttonGroups {
+
+			//	按钮
+			.button {
+				background: transparent;
+				border: 2px solid rgba(255, 255, 255, 0.8);
+				box-sizing: border-box;
+				position: relative;
+				color: rgba(255, 255, 255, 0.8);
+				text-align: center;
+				cursor: pointer;
+				padding-left: 28px;
+				font-size: 12px;
+				margin: 0 0 0 40px;
+				width: 134px;
+				height: 44px;
+				border-radius: 22px;
+				line-height: 40px;
+
+				////	地平线招聘号
+				//&:last-child {
+				//	width: 144px;
+				//}
+
+				//	fixme	看需求
+				//	如果按钮不是被激活的，那么二维码不展示
+				//&:not(:focus) {
+				//	.qrCode {
+				//		display: none !important;
+				//	}
+				//}
+
+				//	微信icon
+				.icon {
+					position: absolute;
+					width: 20px;
+					height: 16px;
+					top: 12px;
+					left: 15px;
+					background-image: url(~@media/basicFooter/icon-wechat.png);
+					background-repeat: no-repeat;
+					background-size: 100%;
+					background-position: center center;
+					//	background-color: red;
+				}
+
+				//	二维码
+				.qrCode {
+					position: absolute;
+					width: 100%;
+					bottom: 52px;
+					left: 0;
+					border-radius: 4px;
+				}
+
+				//	展示二维码
+				&:hover {
+					background-color: var(--white);
+					border-color: var(--colorgray);
+					cursor: pointer;
+					color: rgba(0, 0, 0, 0.8);
+
+					.icon {
+						background-image: url(~@media/basicFooter/icon-wechat-active.png);
+					}
+
+					.qrCode {
+						display: block;
+					}
+				}
+			}
+		}
+
+		//	底部信息
+		.siteInfoMsg {
+			color: var(--colorddd)
+		}
+	}
+}
+
+@media screen and  (max-width: 750px) {
+	.siteInfo {
+		text-align: center;
+		padding: 1rem 0 0 0;
+		background: rgba(26, 26, 26, 1);
+
+		.siteInfoInner {
+			width: 100%;
+			min-width: 0;
+			padding: 0;
+			//	按钮组
+			.buttonGroups {
+	
+				//	按钮
+				.button {
+					width: 2.6rem;
+					height: 0.8rem;
+					margin: 0 0.26rem;
+					padding-left: 0.56rem;
+					line-height: 0.8rem;
+					font-size: 0.24rem;
+					border-radius: 0.4rem;
+					border: 1px solid rgba(247, 247, 247, 0.5);
+	
+					//&:last-child {
+					//	width: 2.78rem;
+					//}
+	
+					.icon {
+						width: 0.4rem;
+						height: 0.32rem;
+						left: 0.3rem;
+						top: 50%;
+						margin-top: -0.16rem;
+					}
+	
+					//	二维码
+					.qrCode {
+						bottom: 1.04rem;
+					}
+				}
+			}
+	
+			//
+			.siteInfoMsg {
+				width: 106%;
+				padding: 0.7rem 0 0.82rem;
+				font-size: 0.24rem;
+				line-height: 0.36rem;
+				transform: translateX(-3%) scale(0.84);
+			}
+		}
+	}
+}

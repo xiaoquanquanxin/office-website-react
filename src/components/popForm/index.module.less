@@ -1,0 +1,286 @@
+.popForm {
+	.popFormMain {
+		width: 840px;
+		height: 520px;
+		background-color: #fff;
+		position: absolute;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		//	表头
+		.popFormDec {
+			width: 300px;
+			height: 100%;
+			-ms-flex-negative: 0;
+			flex-shrink: 0;
+			background-image: url(~@media/popForm/form-dec.png);
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+			padding: 30px 0 0 40px;
+
+			.themeTitle {
+				font-size: 20px;
+				font-weight: 500;
+				color: #fff;
+				line-height: 1.4;
+			}
+
+			.titleDesc {
+				font-size: 14px;
+				color: rgba(255, 255, 255, 0.7);
+				line-height: 1.4285;
+			}
+		}
+
+		//	表单框
+		.popFormIptbox {
+			padding: 30px 30px 0 0;
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			position: relative;
+			//	每一项
+			.labelIptMsg {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				//	必填
+				.requireLabel {
+					width: 134px;
+					-ms-flex-negative: 0;
+					flex-shrink: 0;
+					font-size: 14px;
+					color: rgba(24, 24, 27, 0.5);
+					height: 40px;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					-webkit-box-pack: end;
+					-ms-flex-pack: end;
+					justify-content: flex-end;
+					padding-right: 16px;
+
+					.requireStar {
+						font-size: 14px;
+						color: var(--colorF05A5A);
+						margin-left: 5px;
+					}
+				}
+
+				//	input的框
+				.iptBox {
+					-webkit-box-flex: 1;
+					-ms-flex: 1;
+					flex: 1;
+				}
+
+				//	input
+				.noBb {
+					width: 100%;
+					height: 40px;
+					border-radius: 2px;
+					border: 1px solid #EFEFEF;
+					font-size: 14px;
+					color: #18181B;
+					padding: 0 10px;
+
+					//	文本域
+					&.textarea {
+						height: 82px;
+						padding: 10px
+					}
+
+					//	填写错误
+					&.error {
+						border-color: var(--colorF05A5A);
+
+						//	错误的时候展示msg
+						& + .msg {
+							visibility: visible;
+						}
+					}
+				}
+
+				//	提示文案
+				.msg {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					height: 20px;
+					font-size: 12px;
+					color: var(--colorF05A5A);
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					visibility: hidden;
+
+					&.showMsg {
+						visibility: visible;
+					}
+				}
+
+
+				&:nth-child(6) {
+					.msg {
+						height: 43px;
+					}
+				}
+			}
+
+			//	发送按钮盒子
+			.btnSendBox {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: end;
+				-ms-flex-pack: end;
+				justify-content: flex-end;
+				//	发送按钮
+				.btnSend {
+					height: 43px;
+					background: -webkit-gradient(linear, left top, right top, from(#D5D5D5), to(#BCBCBC));
+					background: -webkit-linear-gradient(left, #D5D5D5 0%, #BCBCBC 100%);
+					background: linear-gradient(90deg, #D5D5D5 0%, #BCBCBC 100%);
+					padding: 0 34px;
+					border-radius: 22px;
+					font-size: 14px;
+					color: #fff;
+					line-height: 1.4285;
+					margin-top: 2px;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					justify-content: center;
+
+					&.btnSendActive {
+						background: -webkit-gradient(linear, left top, right top, from(#009FFF), to(#0066FF));
+						background: -webkit-linear-gradient(left, #009FFF 0%, #0066FF 100%);
+						background: linear-gradient(90deg, #009FFF 0%, #0066FF 100%);
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		//	关闭
+		.iconClose {
+			position: fixed;
+			top: 70px;
+			right: 40px;
+			width: 40px;
+			height: 40px;
+			padding: 10px;
+			background: url(~@media/video/video-icon-close.png) no-repeat;
+			background-size: 100% 100%;
+			// opacity: .6;
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: 750px) {
+			& {
+				width: 7.1rem;
+				height: auto;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				//	表头
+				.popFormDec {
+					width: 100%;
+					background-position: 50% 42%;
+					background-size: cover;
+					padding: 0.2rem 0 0.3rem 0.2rem;
+
+					.themeTitle {
+						font-size: 0.26rem;
+						line-height: 1.4;
+					}
+
+					.titleDesc {
+						font-size: 0.2rem;
+					}
+				}
+
+				//	表单框
+				.popFormIptbox {
+					padding: 0.3rem 0.3rem 0.3rem 0;
+					//	每一项
+					.labelIptMsg {
+						//	必填
+						.requireLabel {
+							width: 1.34rem;
+							font-size: 0.18rem;
+							height: 0.5rem;
+							padding-right: 0.16rem;
+
+							.requireStar {
+								font-size: 0.14rem;
+								margin-left: 0.05rem;
+							}
+						}
+
+						//	input的框
+						.iptBox {
+							line-height: 0;
+						}
+
+						//	input
+						.noBb {
+							height: 0.5rem;
+							border-radius: 0.02rem;
+							font-size: 0.14rem;
+							padding: 0 0.1rem;
+
+							&.textarea {
+								height: 1.2rem;
+								padding: .1rem;
+							}
+						}
+
+						//	提示文案
+						.msg {
+							height: 0.4rem;
+							font-size: 0.15rem;
+						}
+
+						&:nth-child(6) {
+							.msg {
+								height: 0.43rem;
+							}
+						}
+					}
+
+					//	发送按钮盒子
+					.btnSendBox {
+						//	发送按钮
+						.btnSend {
+							height: 0.6rem;
+							padding: 0 0.34rem;
+							border-radius: 0.3rem;
+							font-size: 0.22rem;
+						}
+					}
+				}
+
+				//	关闭
+				.iconClose {
+					width: 0.4rem;
+					height: 0.4rem;
+					right: 0.3rem;
+					top: 1.5rem;
+					padding: 0.1rem;
+				}
+			}
+		}
+	}
+}
+

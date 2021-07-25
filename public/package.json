@@ -1,0 +1,6 @@
+{
+    "description": "前后端分离下，node服务",
+    "dependencies": {
+        "express": "4.17.1"
+    }
+}

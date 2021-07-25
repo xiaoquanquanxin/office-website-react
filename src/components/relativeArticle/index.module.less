@@ -1,0 +1,149 @@
+//	相关文章数据列表
+.relativeListBox {
+	width: 252px;
+	background: var(--white);
+	border: 1px solid rgba(235, 235, 235, 1);
+	padding: 0 16px;
+	-ms-flex-item-align: baseline;
+	align-self: baseline;
+
+	//	想改文章标题
+	.relativeTitle {
+		font-size: 16px;
+		font-weight: 400;
+		color: var(--black);
+		line-height: 3.125;
+		text-indent: 9px;
+	}
+}
+
+//	相关文章每一项
+.relativeItem {
+	border-top: solid 1px rgba(132, 132, 132, 0.1);
+	padding: 14px 0;
+
+	.relativeItemInner {
+		cursor: pointer;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		.imgBox {
+			width: 70px;
+			height: 70px;
+			border: 1px solid rgba(235, 235, 235, 1);
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			overflow: hidden;
+
+			.img {
+				height: 100%;
+				vertical-align: top;
+			}
+		}
+
+		//	内容盒子
+		.contentBox {
+			width: 135px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+
+			&:hover {
+				.title {
+					color: var(--color4958C3);
+					opacity: .6;
+				}
+			}
+
+			.title {
+				height: 40px;
+				overflow: hidden;
+				font-size: 14px;
+				font-weight: 400;
+				color: rgba(0, 0, 0, 0.6);
+				line-height: 20px;
+			}
+
+			//	日期
+			.date {
+				font-size: 12px;
+				font-weight: 400;
+				color: rgba(0, 0, 0, 0.3);
+				line-height: 17px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.relativeListBox {
+		width: 100%;
+		margin-top: 0.8rem;
+		padding: 0 0.32rem;
+
+		.relativeTitle {
+			height: 1rem;
+			font-size: 0.3rem;
+			text-indent: 0.5em;
+		}
+	}
+
+	//	相关文章每一项
+	.relativeItem {
+		padding: 0.28rem 0;
+
+		.relativeItemInner {
+			.imgBox {
+				width: 2.16rem;
+				height: 1.4rem;
+				// background: rgba(235, 235, 235, 1);
+			}
+
+			.contentBox {
+				flex: 1;
+				padding-left: 0.32rem;
+				-webkit-box-pack: start;
+				-ms-flex-pack: start;
+				justify-content: space-between;
+
+				.title {
+					height: auto;
+					font-size: 0.28rem;
+					line-height: .4rem;
+					color: rgba(0, 0, 0, 0.8);
+					display: -webkit-box;
+					white-space: normal !important;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					word-wrap: break-word;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+				}
+
+				.date {
+					font-size: 0.24rem;
+					line-height: 0.2rem;
+					margin-top: 0.1rem;
+				}
+			}
+		}
+	}
+}

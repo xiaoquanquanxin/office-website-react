@@ -1,0 +1,109 @@
+.descUl {
+	margin-top: 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	line-height: 0;
+
+
+	.item {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+
+		.label {
+			font-size: 16px;
+			font-weight: 400;
+			color: #fff;
+			line-height: 1.375;
+		}
+
+		.c {
+			margin-top: 13px;
+			background: -webkit-gradient(linear, left top, left bottom, from(#009FFF), to(#0066FF));
+			background: -webkit-linear-gradient(top, #009FFF 0%, #0066FF 100%);
+			background: linear-gradient(180deg, #009FFF 0%, #0066FF 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			& * {
+				font-family: 'Roboto Condensed';
+			}
+
+			b {
+				font-size: 30px;
+				color: #178BFF;
+				line-height: 1;
+				padding-right: 9px;
+				font-weight: 700;
+
+				s {
+					color: #178BFF;
+					font-size: 30px;
+					font-weight: 700;
+				}
+			}
+
+			span {
+				font-size: 20px;
+				color: #007DFF;
+				line-height: 1.3;
+				font-weight: 700;
+			}
+		}
+
+		//	分割线
+		.line {
+			margin: 0 43px;
+			display: block;
+			width: 2px;
+			height: 20px;
+			background: #fff;
+			opacity: 0.3;
+			transform: translateY(15px);
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			margin-top: 0.28rem;
+
+			.item {
+				.label {
+					font-size: 0.2rem;
+					font-weight: 400;
+				}
+
+				.c {
+					margin-top: 0.28rem;
+
+					b {
+						font-size: 0.36rem;
+						padding-right: 0.12rem;
+						s {
+							font-size: 0.36rem;
+						}
+					}
+					span {
+						font-size: 0.24rem;
+					}
+				}
+
+				.line {
+					margin: 0 0.5rem;
+					width: 0.02rem;
+					height: 0.24rem;
+					// transform: translateY(.15rem);
+				}
+			}
+		}
+	}
+}

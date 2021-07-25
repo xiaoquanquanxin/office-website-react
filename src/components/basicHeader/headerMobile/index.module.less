@@ -1,0 +1,40 @@
+//	头部
+.basicHeader {
+	width: 100%;
+	//	外套
+	.basicHeaderWrap {
+		position: fixed;
+		height: 1.08rem;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		background-color: var(--white);
+		width: 100%;
+		-webkit-overflow-scrolling: touch;
+		line-height: 1.08rem;
+		//	如果滚动到了顶部，并且是首页
+		&.isTopAndHome {
+			background-color: transparent;
+		}
+
+		//	头部的logo
+		.basicHeaderLogo {
+			width: 2rem;
+			margin-left: .48rem;
+			height: 0.6rem;
+			vertical-align: top;
+			margin-top: .28rem;
+		}
+
+		//	菜单 三 三个横
+		.basicHeaderMenu {
+			width: .48rem;
+			position: absolute;
+			top: .32rem;
+			right: .48rem;
+		}
+	}
+}
+

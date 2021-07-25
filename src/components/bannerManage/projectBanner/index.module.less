@@ -1,0 +1,138 @@
+.bannerSlider {
+	//	媒体
+	.sliderItemImg, .sliderItemVideo {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+
+	//	文字
+	.sliderText {
+		width: 100%;
+		left: 0;
+		bottom: 77px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		background-repeat: no-repeat;
+		position: absolute;
+		text-align: center;
+
+		.sliderTitle {
+			font-size: 40px;
+			font-weight: 700;
+			color: #fff;
+			line-height: 1.25;
+			text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+		}
+
+		.sliderDescription {
+			font-size: 16px;
+			color: rgba(255, 255, 255, .8);
+			line-height: 2;
+			margin-top: 16px;
+		}
+
+	}
+
+	@media screen and(max-width: 750px) {
+		& {
+			.sliderText {
+				bottom: 0.4rem;
+
+				.sliderTitle {
+					font-size: 0.4rem;
+					text-shadow: 0 0 0.06rem rgba(0, 0, 0, 0.5);
+
+					&.textSmallSize {
+						font-size: .3rem;
+					}
+				}
+
+				.sliderDescription {
+					font-size: 0.24rem;
+					margin-top: 0.24rem;
+
+					&.textSmallSize {
+						font-size: .16rem;
+						margin-top: .16rem;
+					}
+				}
+			}
+		}
+	}
+
+	//	6 是 核心技术
+	//	12 是 天工开物
+	//	13 是 高级别辅助驾驶
+	//	14 是 自动驾驶
+	//	16 是 智能座舱
+	//	17 是 高精地图
+	//	18 是 智能物联网
+
+	&.pb6,
+	&.pb12,
+	&.pb13,
+	&.pb14,
+	&.pb16,
+	&.pb17,
+	&.pb18 {
+		background-color: #000;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: 100% auto;
+
+		.sliderDescription {
+			width: 921px;
+		}
+		
+		@media screen and (max-width: 750px) {
+			& {
+				background-position: center;
+				background-size: auto 100%;
+				.sliderText {
+					bottom: 0.66rem;
+					.sliderTitle {
+						width: 6.3rem;
+						line-height: 0.44rem !important;
+						font-weight: 500 !important;
+						text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+						font-size: 0.4rem;
+						letter-spacing: 0.02rem;
+						text-align: left;
+					}
+					.sliderDescription {
+						width: 6.3rem;
+						margin-top: 0.24rem !important;
+						text-align: justify;
+						font-size: 0.24rem !important;
+						line-height: 0.4rem !important;
+						color: rgba(255, 255, 255, 0.7) !important;
+					}
+				}
+			}
+		}
+	}
+
+	// &.pb18, &.pb14 {
+	// 	@media screen and (max-width: 750px) {
+	// 		& {
+	// 			.sliderText {
+	// 				.sliderTitle {
+	// 					text-align: left;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+}

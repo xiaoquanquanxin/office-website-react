@@ -1,0 +1,149 @@
+.floatBarBox {
+	height: 64px;
+	background-color: var(--colorf9);
+	left: 0;
+	width: 100%;
+	top: 0;
+
+	.titleBox {
+		position: relative !important;
+		margin: 0 auto;
+		width: 1280px;
+		height: 100%;
+		padding: 0 64px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		.themeDesc {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			white-space: nowrap;
+
+			.subTitle {
+				font-size: 20px;
+				font-weight: 500;
+				color: rgba(0, 0, 0, 0.8);
+			}
+
+			.subDescription {
+				//	background: grey;
+				font-size: 14px;
+				color: rgba(0, 0, 0, 0.7);
+				padding-left: 25px;
+			}
+		}
+
+		.titleNavInquireBtn {
+			//	background: red;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			white-space: nowrap;
+
+			//	锚点
+			.navTag {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				white-space: nowrap;
+
+				.anchor {
+					cursor: pointer;
+					font-size: 14px;
+					font-weight: 500;
+					color: rgba(0, 0, 0, 0.55);
+					padding: 0 20px;
+
+					&.active {
+						color: var(--color06f);
+					}
+				}
+			}
+
+			//	按钮
+			.inquireBtn {
+				width: 100px;
+				height: 36px;
+				background: -webkit-gradient(linear, left top, right top, from(#009FFF), to(#0066FF));
+				background: -webkit-linear-gradient(left, #009FFF 0%, #0066FF 100%);
+				background: linear-gradient(90deg, #009FFF 0%, #0066FF 100%);
+				border-radius: 20px;
+				margin-left: 20px;
+				font-size: 14px;
+				color: #fff;
+				display: -webkit-inline-box;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				cursor: pointer;
+			}
+		}
+	}
+
+	@media screen and  (max-width: 750px) {
+		& {
+			height: 1rem;
+			line-height: 1rem;
+
+			.titleBox {
+				width: 100%;
+				padding: 0 0.4rem;
+				height: 100%;
+
+				.themeDesc {
+					.subTitle {
+						font-size: 0.28rem;
+					}
+
+					.subDescription {
+						// width: 0;
+						// overflow: hidden;
+						// text-overflow: ellipsis;
+						// font-size: 0.18rem;
+						// padding-left: 0.2rem;
+						display: none;
+					}
+				}
+
+				.titleNavInquireBtn {
+					.navTag {
+						.anchor {
+							font-size: 0.24rem;
+							padding: 0 0.4rem 0 0;
+						}
+					}
+
+					.inquireBtn {
+						width: 1.66rem;
+						height: 0.6rem;
+						border-radius: 0.34rem;
+						margin-left: 0;
+						font-size: 0.24rem;
+					}
+				}
+			}
+		}
+	}
+}

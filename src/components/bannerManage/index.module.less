@@ -1,0 +1,30 @@
+//	普通的每一项
+.bannerSwiper {
+	overflow: hidden;
+	background-color: var(--black);
+	position: relative;
+	width: 100%;
+
+	.container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.swiper-slide {
+	overflow: hidden;
+}
+
+//	征程、旭日2、旭日3、MATRIX的每一项
+.swiperMainWrapDark, .swiperMainWrapLight {
+	.bannerSwiper {
+		background-color: transparent;
+		.container {
+			@media screen and (max-width: 750px) {
+			}
+		}
+	}
+}

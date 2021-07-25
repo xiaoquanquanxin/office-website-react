@@ -1,0 +1,144 @@
+.journeyAlgorithm {
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+	height: 560px;
+	padding: 70px 0 80px 0;
+	background-image: url(~@media/journey2/j2-bg@2x.png);
+
+	.journeyAlgorithmIn {
+		width: 992px;
+		margin: 0 auto;
+
+		.videoDesc {
+			margin-top: 61px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+
+			.videoBox {
+				width: 510px;
+				height: 300px;
+				-ms-flex-negative: 0;
+				flex-shrink: 0;
+				margin-right: 40px;
+				position: relative;
+				background-repeat: no-repeat;
+				background-position: 50%;
+				background-size: cover;
+
+				.img {
+					left: 50%;
+					top: 50%;
+					position: absolute;
+					transform: translate(-50%, -50%);
+					-webkit-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					-moz-transform: translate(-50%, -50%);
+					width: 50px;
+					height: 50px;
+					cursor: pointer;
+				}
+			}
+
+			.descList {
+				-ms-flex-negative: 0;
+				flex-shrink: 0;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				width: 442px;
+				-ms-flex-line-pack: justify;
+				align-content: space-between;
+			}
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			padding: 1.2rem 0 0.2rem;
+			height: auto;
+
+			.journeyAlgorithmIn {
+				width: 6.74rem;
+
+				.videoDesc {
+					margin-top: 0.8rem;
+					-webkit-box-orient: vertical;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: column;
+					flex-direction: column;
+
+					.videoBox {
+						width: 6.3rem;
+						height: 4.18rem;
+						margin: 0 auto;
+
+						.img {
+							width: 0.8rem;
+							height: 0.8rem;
+						}
+					}
+
+					.descList {
+						width: 100%;
+						padding-top: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.item {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+
+	.name {
+		font-size: 18px;
+		color: #fff;
+		line-height: 2.0555;
+		background: url(~@media/adas/line.png) no-repeat 0 100%;
+		background-size: auto 2px;
+	}
+
+	.desc {
+		width: 205px;
+		font-size: 12px;
+		color: rgba(255, 255, 255, .6);
+		line-height: 1.5;
+		margin-top: 4px;
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			-webkit-box-flex: 0;
+			-ms-flex: none;
+			flex: none;
+			width: 50%;
+			-ms-flex-negative: 0;
+			flex-shrink: 0;
+			// margin-bottom: 0.6rem;
+			padding: 0 0.22rem 0.6rem;
+
+			.name {
+				font-size: 0.28rem;
+				background-size: auto 0.03rem;
+			}
+
+			.desc {
+				width: auto;
+				font-size: 0.2rem;
+				margin-top: 0.06rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,97 @@
+.sbanner {
+	height: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+	padding: 37px 0 30px 0;
+	background-image: url(~@media/autonomous-driving/ap_bg01.jpg);
+
+	.sbannerIn {
+		margin: 0 auto;
+		width: 910px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		.imgCenter2 {
+			width: 254px;
+			height: 133px;
+			-ms-flex-negative: 0;
+			flex-shrink: 0;
+		}
+
+		.titleDesc {
+			width: 617px;
+			-ms-flex-negative: 0;
+			flex-shrink: 0;
+
+			.title {
+				font-size: 24px;
+				font-weight: 700;
+				color: rgba(255, 255, 255, .8);
+				line-height: 1.375;
+				margin-top: 20px;
+			}
+
+			.desc {
+				margin-top: 5px;
+				font-size: 14px;
+				color: rgba(255, 255, 255, .6);
+				line-height: 1.7142;
+			}
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			height: auto;
+			padding: 0 0 0.6rem 0;
+
+			.sbannerIn {
+				width: 100%;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+
+				.imgCenter2 {
+					display: none;
+					// width: 6.4rem;
+					// height: 3.35rem;
+				}
+
+				.titleDesc {
+					width: 6.4rem;
+					-ms-flex-negative: 0;
+					flex-shrink: 0;
+					text-align: center;
+
+					.title {
+						font-size: 0.28rem;
+						margin-top: 0.14rem;
+						text-align: left;
+					}
+
+					.desc {
+						margin-top: 0.06rem;
+						font-size: 0.2rem;
+						text-align: justify;
+					}
+				}
+			}
+		}
+	}
+}

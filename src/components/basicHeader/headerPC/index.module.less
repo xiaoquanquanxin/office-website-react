@@ -1,0 +1,43 @@
+//	头部
+.basicHeader {
+	position: relative;
+	//	解决问题1
+	min-height: 1px;
+	margin-bottom: -1px;
+	//	外套
+	.basicHeaderWrap {
+		position: fixed;
+		width: 100%;
+		min-width: 1280px;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		margin: auto;
+		background-color: var(--white);
+		//	如果滚动到了顶部，并且是首页
+		&.isTopAndHome {
+			background-color: transparent;
+		}
+
+		.inner {
+			width: 1280px;
+			margin: 0 auto;
+			height: 64px;
+			padding: 0 64px;
+			//	💡有问题，对齐方式如果是按vertical-middle，则忽略了行高。所以这样是不对的
+			line-height: 67px;
+			//	头部的logo
+			.basicHeaderLogo {
+				height: 100%;
+
+				img {
+					margin-top: 14px;
+					vertical-align: top;
+					width: 118px;
+					height: 36px;
+				}
+			}
+		}
+	}
+}
+

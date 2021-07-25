@@ -1,0 +1,45 @@
+.openExplorer {
+	background-color: rgba(24, 24, 29, 1);
+	padding: 70px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+
+	.img {
+		margin: 40px auto 0;
+		width: 938px;
+	}
+
+	&.isLight {
+		background-color: var(--colorf9);
+	}
+
+	@media screen and  (max-width: 750px) {
+		& {
+			background: -webkit-gradient(linear, left top, left bottom, from(#2E2E32), to(#19191D));
+			background: -webkit-linear-gradient(top, #2E2E32 0%, #19191D 100%);
+			background: linear-gradient(180deg, #2E2E32 0%, #19191D 100%);
+			padding: 1.2rem 0 0.8rem;
+
+			.img {
+				margin: 0.6rem auto 0;
+				width: 6.66rem;
+
+				// &.marginClassM2 {
+				// 	width: 7.1rem;
+				// }
+			}
+			&.isLight {
+				background: var(--colorf9);
+			}
+		}
+	}
+}

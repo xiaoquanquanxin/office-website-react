@@ -1,0 +1,150 @@
+.advantages {
+	background-color: #F9F9F9;
+	padding: 70px 0;
+	position: relative;
+
+	.advantagesIn {
+		margin: 0 auto;
+		width: 1080px;
+		overflow: hidden;
+
+		.list {
+			&.itemCount3 {
+				.item {
+					width: 333px;
+					margin-right: 40px;
+				}
+			}
+
+			&.itemCount4 {
+				.item {
+					width: 252px;
+					margin-right: 18px;
+				}
+			}
+
+			.item {
+				margin-top: 40px;
+				float: left;
+				border: 1px solid #EBEBEB;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				transition: -webkit-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+				position: relative;
+				background-color: #fff;
+				border-radius: 2px;
+				padding-top: 43px;
+				padding-bottom: 51px;
+
+				.imgBox {
+					width: 37.3%;
+					padding-top: 37.3%;
+					overflow: hidden;
+					position: relative;
+					margin: 0 auto;
+
+					.img {
+						height: 100%;
+						left: 50%;
+						top: 50%;
+						width: auto;
+						-webkit-transform: translate(-50%, -50%);
+						-ms-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+						position: absolute;
+					}
+				}
+
+				.title {
+					margin-top: 51px;
+					font-size: 24px;
+					font-weight: 500;
+					color: rgba(0, 0, 0, 0.9);
+					line-height: 1.375;
+					overflow: hidden;
+					text-align: center;
+				}
+
+				.desc {
+					padding: 0 25px;
+					height: 72px;
+					font-size: 14px;
+					color: rgba(0, 0, 0, 0.6);
+					line-height: 1.7142;
+					overflow: hidden;
+					margin-top: 16px;
+				}
+
+				&:hover {
+					box-shadow: 0px 4px 12px 0px rgba(211, 211, 211, 0.5);
+					-webkit-transform: translateY(-10px);
+					-ms-transform: translateY(-10px);
+					transform: translateY(-10px);
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			padding: 1.2rem 0.4rem 0.6rem;
+
+			.advantagesIn {
+				width: 100%;
+				// padding: 0.8rem 0 0;
+
+				.list, .list.itemCount4, .list.itemCount3 {
+					display: flex;
+					flex-direction: column;
+					padding-top: 0.50rem;
+					.item {
+						width: 100%;
+						margin: 0.3rem 0 0;
+						border-radius: 0.02rem;
+						padding: 0.4rem 0.4rem 0.4rem 2.04rem;
+						position: relative;
+						.imgBox {
+							position: absolute;
+							top: 50%;
+							left: .44rem;
+							width: 1.2rem;
+							transform: translateY(-50%);
+							.img {
+								width: 100%;
+								height: auto;
+							}
+						}
+
+						.title {
+							margin: 0;
+							font-size: 0.32rem;
+							text-align: left;
+							line-height: 0.44rem;
+						}
+
+						.desc {
+							margin-top: 0.06rem;
+							padding: 0;
+							height: auto;
+							font-size: 0.2rem;
+							line-height: 0.32rem;
+							text-align: justify;
+						}
+
+						&:hover {
+							box-shadow: 0px 0.04rem 0.12rem 0px rgba(211, 211, 211, 0.5);
+							-webkit-transform: translateY(-0.1rem);
+							-ms-transform: translateY(-0.1rem);
+							transform: translateY(-0.1rem);
+						}
+					}
+				}
+			}
+		}
+	}
+}

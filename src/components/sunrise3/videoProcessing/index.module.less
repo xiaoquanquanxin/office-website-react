@@ -1,0 +1,33 @@
+.videoProcessing {
+	background: -webkit-gradient(linear, left top, left bottom, from(#2E2E32), to(#19191D));
+	background: -webkit-linear-gradient(top, #2E2E32 0%, #19191D 100%);
+	background: linear-gradient(180deg, #2E2E32 0%, #19191D 100%);
+	padding: 70px 0 40px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+
+	.img {
+		margin: 60px auto 0;
+		width: 828px;
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			padding: 1.2rem 0 1.88rem 0;
+
+			.img {
+				margin: 2.14rem auto 0;
+				width: 6rem;
+			}
+		}
+	}
+}

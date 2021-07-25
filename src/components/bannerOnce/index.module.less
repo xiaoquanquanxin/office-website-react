@@ -1,0 +1,135 @@
+.bannerOnce {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bannerSlider {
+  position: relative;
+}
+
+.title {
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.sTitle {
+  font-weight: 500;
+  color: #fff;
+}
+
+.desc {
+  color: #fff;
+}
+
+.line {
+  width: 200px;
+  height: 6px;
+  margin-top: 60px;
+  background: url(~@media/banner/banner-line-5.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+@media screen and (min-width: 751px) {
+  .bannerOnce {
+    background-image: url(/static/media/bg-banner-6.8be79e25.png);
+    .bannerSlider {
+      width: 1280px;
+      height: 680px;
+      margin: 0 auto;
+      .sliderItemImg,
+      .sliderItemVideo {
+        width: 1280px;
+        height: 680px;
+        margin: 0 auto;
+      }
+      .textDesc {
+        padding-left: 100px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    
+        .title {
+          font-size: 40px;
+          line-height: 50px;
+        }
+
+        .sTitle {
+          margin-top: 10px;
+          font-size: 20px;
+          line-height: 30px;
+          opacity: 0.8;
+        }
+    
+        .desc {
+          width: 552px;
+          margin-top: 30px;
+          font-size: 16px;
+          line-height: 26px;
+          opacity: 0.8;
+        }
+    
+        .line {
+          width: 200px;
+          height: 6px;
+          margin-top: 83px;
+          background: url(~@media/banner/banner-line-5.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+    .line1 {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .bannerOnce {
+    background: linear-gradient(139deg, #282828 0%, #000000 100%);
+    .bannerSlider {
+      width: 100%;
+      padding: 1.2rem 0.6rem 0.7rem;
+      .sliderItemVideo,
+      .sliderItemImg {
+        position: absolute;
+        top: 2.96rem;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 6.84rem;
+        width: auto;
+      }
+
+      .textDesc {
+        width: 100%;
+
+        .title {
+          font-weight: 500;
+          font-size: .4rem;
+          line-height: .44rem;
+        }
+        .sTitle {
+          font-weight: 400;
+          font-size: .24rem;
+          line-height: .4rem;
+          margin-top: 0.2rem;
+          opacity: 0.7;
+        }
+        .desc {
+          margin-top: 7.58rem;
+          font-size: .24rem;
+          line-height: 0.52rem;
+          opacity: 0.7;
+        }
+      }
+    }
+    
+    .line {
+      width: 3.2rem;
+      height: 0.06rem;
+      margin-top: 0.32rem;
+    }
+    .line2 {
+      display: none;
+    }
+  }
+}

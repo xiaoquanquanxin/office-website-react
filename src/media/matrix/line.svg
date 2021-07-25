@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="2px" viewBox="0 0 10 2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>灰条</title>
+    <g id="智能驾驶" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="高精地图" transform="translate(-755.000000, -3479.000000)" fill="#000000">
+            <g id="算法库" transform="translate(0.000000, 2998.000000)">
+                <rect id="灰条" x="755" y="481" width="10" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

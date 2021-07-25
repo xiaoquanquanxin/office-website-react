@@ -1,0 +1,41 @@
+.sysStructor {
+	background-color: var(--colorf9);
+
+	.sysStructorIn {
+		position: relative;
+		margin: 0 auto;
+		width: 1280px;
+		img {
+			width: 1280px;
+			height: auto;
+		}
+		.title {
+			position: absolute;
+			top: 70px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 40px;
+			font-weight: 500;
+			line-height: 50px;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			.sysStructorIn {
+				width: 100%;
+				padding-top: 0.8rem;
+				img {
+					width: 140%;
+					transform: translateX(-15%);
+				}
+				.title {
+					top: 1.2rem;
+					line-height: 0.6rem;
+					font-size: 0.4rem;
+				}
+			}
+		}
+	}
+}

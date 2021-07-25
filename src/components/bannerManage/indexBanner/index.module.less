@@ -1,0 +1,135 @@
+.bannerSwiper {
+	position: relative;
+	overflow: hidden;
+	padding-top: 62.5%;
+	width: 100%;
+	background-color: var(--black);
+	//min-width: 1280px;
+	.container {
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: 100%;
+		position: absolute;
+	}
+}
+
+.bannerSlider {
+	//	图片,//	视频
+	.sliderItemImg, .sliderItemVideo {
+		//height: auto;
+		width: 100%;
+		left: 0;
+		position: absolute;
+		bottom: 0;
+	}
+
+	//	文案
+	.sliderItemText {
+		position: absolute;
+		top: -20px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 106px;
+		margin: auto;
+		color: var(--white);
+		// background: #f90;
+		text-align: center;
+		// vertical-align: middle;
+		// transform: translateY(-50%);
+		animation: homeBannerOne 1.5s ease;
+		transition: transform 1.5s ease 0.5s, opacity 1.5s ease 0.5s;
+
+
+		.title {
+			line-height: 50px;
+			font-size: 48px;
+			font-weight: 700;
+			letter-spacing: 4px;
+		}
+
+		//	描述
+		.description {
+			margin-top: 24px;
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 32px;
+			letter-spacing: 12px;
+		}
+
+	}
+
+	//	链接
+	.link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+	}
+}
+
+
+@media screen and (max-width: 750px) {
+	.bannerSwiper {
+		height: 11.6rem;
+	}
+
+	.bannerSlider {
+		// height: 5.8rem;
+
+		.sliderItemImg {
+			width: auto;
+			height: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	
+		.sliderItemText {
+			height: 1.72rem;
+			// background: #ff0;
+
+			.title {
+				width: 5.22rem;
+				height: 1.2rem;
+				margin-left: 0.6rem;
+				line-height: 0.6rem;
+				font-weight: 500;
+				font-size: 0.56rem;
+				letter-spacing: 0.02rem; 
+				word-spacing: 0.02rem;
+				text-align: left;
+			}
+
+			.description {
+				margin-top: 0.12rem;
+				padding: 0 0.6rem;
+				line-height: 0.33rem;
+				font-size: 0.28rem;
+				font-weight: 400;
+				letter-spacing: 0.06rem;
+				text-align: left;
+			}
+		}
+	}
+}
+
+@keyframes homeBannerOne {
+	0%{
+		-webkit-transform: translateY(40px);
+		-ms-transform: translateY(40px);
+		-moz-transform: translateY(40px);
+		transform: translateY(40px);
+		opacity: 0;
+	}
+	100%{
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

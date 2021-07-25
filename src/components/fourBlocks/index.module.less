@@ -1,0 +1,99 @@
+.cdrb {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 88px 0 88px 0;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(#0F0F0F));
+	background: -webkit-linear-gradient(top, #121212 0%, #0F0F0F 100%);
+	background: linear-gradient(180deg, #121212 0%, #0F0F0F 100%);
+
+	//	是浅色
+	&.isLight {
+		//	background: var(--colorf9);
+		background: var(--white);
+
+		.item {
+			.name {
+				color: rgba(0, 0, 0, 0.8);
+			}
+		}
+	}
+
+	.item {
+		text-align: center;
+
+		.imgCenter2 {
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+			margin: 0 auto;
+			width: 72px;
+			height: 72px;
+			overflow: hidden;
+		}
+
+		.name {
+			font-size: 16px;
+			font-weight: 500;
+			color: rgba(255, 255, 255, 0.8);
+			line-height: 1.375;
+			margin-top: 27px;
+		}
+	}
+
+
+	//	一行几个
+	&.dataLength4 {
+		.item {
+			width: 252px;
+		}
+	}
+
+	&.dataLength5 {
+		.item {
+			width: 216px;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			padding: 0 0 0.8rem 0;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+
+			.item {
+				margin-top: 0.8rem;
+
+				.imgCenter2 {
+					width: 0.88rem;
+					height: 0.88rem;
+					background-size: 100% 100%;
+				}
+
+				.name {
+					font-size: 0.24rem;
+					margin-top: 0.28rem;
+					transform: scale(0.83);
+				}
+			}
+
+			//	一行几个
+			&.dataLength4 {
+				padding-left: .77rem;
+				padding-right: .77rem;
+				.item {
+					width: 50%;
+				}
+			}
+
+			&.dataLength5 {
+				.item {
+					width: 33.333%;
+				}
+			}
+		}
+	}
+}

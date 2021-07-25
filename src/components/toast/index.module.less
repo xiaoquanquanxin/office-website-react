@@ -1,0 +1,42 @@
+.toastWrap {
+
+	.toast {
+		width: 300px;
+		background-color: rgba(0, 0, 0, .7);
+		line-height: 60px;
+		text-align: center;
+		margin-top: -200px;
+		border-radius: 10px;
+		opacity: 0;
+		color: var(--white);
+
+		&.isAnimation {
+			animation: toastAnimation 1 3s;
+		}
+
+		@media screen and (max-width: 750px) {
+
+			& {
+				border-radius: .1rem;
+				width: 3rem;
+				line-height: .6rem;
+			}
+		}
+	}
+}
+
+//	toast的动画
+@keyframes toastAnimation {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

@@ -1,0 +1,117 @@
+.applyScene {
+	padding: 70px 0;
+	position: relative;
+
+	&.black {
+		background: -webkit-gradient(linear, left top, left bottom, from(#2E2E32), to(#19191D));
+		background: -webkit-linear-gradient(top, #2E2E32 0%, #19191D 100%);
+		background: linear-gradient(180deg, #2E2E32 0%, #19191D 100%);
+
+		.title {
+			color: var(--white);
+		}
+	}
+
+	&.white {
+		background: #FAFAFA;
+
+		.title {
+			color: var(--black);
+		}
+	}
+
+	.title {
+		font-size: 40px;
+		font-weight: 500;
+		line-height: 1.25;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+	.applySceneImg {
+		display: block;
+		width: 100%;
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			padding: 1.2rem 0;
+			
+			&.white {
+				background: #fff;
+			}
+			.title {
+				font-size: 0.4rem;
+				padding-bottom: 0.48rem;
+			}
+		}
+	}
+}
+
+.applySceneInner {
+	margin: auto;
+	width: 100%;
+
+	.listWrap {
+		width: 50%;
+		height: 100%;
+		position: relative;
+		left: 50%;
+		overflow: visible;
+
+		.applySceneTopList, .applySceneBottomList {
+			margin-top: 3.125%;
+			justify-content: space-between;
+			display: flex;
+			position: relative;
+
+			//	图片
+			.topItem {
+				width: 24%;
+			}
+
+			.bottomItem {
+				width: 19.1489%;
+			}
+		}
+
+		.applySceneTopList {
+			width: 234.375%;
+			left: -117.1875%;
+		}
+
+		.applySceneBottomList {
+			width: 293.75%;
+			left: -146.875%;
+		}
+	}
+
+	@media screen and  (max-width: 750px) {
+		& {
+			width: 100%;
+			transform: scale(1.2);
+			transform-origin: top center;
+
+			.listWrap {
+				.applySceneTopList, .applySceneBottomList {
+					margin-top: 0.12rem;
+
+					.topItem, .bottomItem {
+						width: 2.101rem;
+					}
+				}
+
+				.applySceneTopList {
+					width: 8.789rem;
+					left: -4.39rem;
+				}
+
+				.applySceneBottomList {
+					width: 11.0156rem;
+					left: -5.5078rem;
+				}
+			}
+		}
+	}
+}
+

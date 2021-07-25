@@ -1,0 +1,132 @@
+.moduleNav {
+	background-color: #fff;
+	padding: 70px 0 60px 0;
+
+	.moduleNavIn {
+		margin: 0 auto;
+		width: 1080px;
+		overflow: hidden;
+
+		.list {
+			width: 1107px;
+
+			.item {
+				width: 342px;
+				margin-right: 27px;
+				margin-top: 40px;
+				float: left;
+				border: 1px solid #EBEBEB;
+				padding-bottom: 51px;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				transition: -webkit-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+				position: relative;
+
+				.imgBox {
+					width: 100%;
+					height: 240px;
+					overflow: hidden;
+					position: relative;
+
+					.img {
+						height: 100%;
+						width: auto;
+						// -webkit-transform: translate(-50%, -50%);
+						// -ms-transform: translate(-50%, -50%);
+						// transform: translate(-50%, -50%);
+						// position: absolute;
+						// left: 50%;
+						// top: 50%;
+					}
+				}
+
+				.title {
+					margin-top: 32px;
+					font-size: 24px;
+					font-weight: 500;
+					color: rgba(0, 0, 0, 0.9);
+					line-height: 1.375;
+					overflow: hidden;
+					text-align: center;
+				}
+
+				.desc {
+					padding: 0 30px;
+					height: 112px;
+					font-size: 14px;
+					color: rgba(0, 0, 0, 0.6);
+					line-height: 2;
+				}
+
+				&:hover {
+					box-shadow: 0px 4px 12px 0px rgba(211, 211, 211, 0.5);
+					border-radius: 2px;
+					-webkit-transform: translateY(-10px);
+					-ms-transform: translateY(-10px);
+					transform: translateY(-10px);
+				}
+			}
+
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			padding: 0.3rem 0 1.2rem 0;
+
+			.moduleNavIn {
+				width: 100%;
+				padding: 1.2rem 0.4rem 0;
+
+				.list {
+					width: auto;
+					display: flex;
+					flex-direction: column;
+					// padding-bottom: 0;
+
+					.item {
+						width: 100%;
+						margin: 0.8rem 0 0;
+						padding-bottom: 0.5rem;
+
+						.imgBox {
+							width: 100%;
+							height: auto;
+
+							.img {
+								width: 100%;
+								height: auto;
+							}
+						}
+
+						.title {
+							margin: 0;
+							padding: 0.4rem 0.3rem 0.2rem;
+							font-size: 0.36rem;
+							text-align: left;
+							line-height: 0.6rem;
+						}
+
+						.desc {
+							margin: 0;
+							padding: 0 0.3rem;
+							height: auto;
+							font-size: 0.24rem;
+							text-align: justify;
+							line-height: 0.5rem;
+						}
+
+						&:hover {
+							box-shadow: 0px 0.04rem 0.12rem 0px rgba(211, 211, 211, 0.5);
+							border-radius: 0.02rem;
+							-webkit-transform: translateY(-0.1rem);
+							-ms-transform: translateY(-0.1rem);
+							transform: translateY(-0.1rem);
+						}
+					}
+				}
+			}
+		}
+	}
+}

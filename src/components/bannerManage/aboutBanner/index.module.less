@@ -1,0 +1,30 @@
+.bannerSlider {
+	.sliderItemVideo, .sliderItemImg {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		width: auto;
+		height: 3rem;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+
+	.sliderTitle {
+		font-weight: 700;
+		font-size: 50px;
+		color: rgba(255, 255, 255, 1); 
+		line-height: 50px;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		@media screen and (max-width: 750px) {
+			font-size: 0.4rem;
+			font-weight: 500;
+		}
+	}
+}

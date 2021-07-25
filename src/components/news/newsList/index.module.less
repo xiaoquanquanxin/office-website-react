@@ -1,0 +1,104 @@
+.listRelative {
+	background-color: var(--colorf9);
+	padding: 24px 0 90px 0;
+
+	.listInner {
+		width: 1080px;
+		margin: 0 auto;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		//	主数据列表
+		.listBox {
+			//	列表
+			.mainList {
+				width: 804px;
+
+
+			}
+
+			//	加载更多
+			.addMore {
+				width: 91px;
+				margin: 40px auto 0;
+				height: 30px;
+				border-radius: 16px;
+				background-color: var(--white);
+				border: 1px solid rgba(235, 235, 235, 1);
+				font-size: 12px;
+				font-weight: 400;
+				cursor: pointer;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				color: rgba(0, 0, 0, 0.8);
+
+				&:hover {
+					color: var(--color06f);
+				}
+			}
+
+
+			//	没有更多数据
+			.emptyText {
+				margin-top: 40px;
+				font-size: 12px;
+				font-weight: 400;
+				color: rgba(0, 0, 0, 1);
+				line-height: 2.5;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 750px) {
+	.listRelative {
+		padding: 0.4rem 0 0.8rem 0;
+
+		.listInner {
+			width: 100%;
+			padding: 0 0.3rem;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+
+			//	主数据盒子
+			.listBox {
+				//	主数据列表
+				.mainList {
+					width: 100%;
+				}
+
+				//	加载更多
+				.addMore {
+					width: 1.82rem;
+					margin: 0.6rem auto 0;
+					height: 0.6rem;
+					border-radius: 0.32rem;
+					font-size: 0.2rem;
+				}
+
+				.emptyText {
+					margin-top: 0.6rem;
+					font-size: 0.2rem;
+					line-height: 0.6rem;
+					color: rgba(0, 0, 0, 0.6)
+				}
+			}
+
+		}
+	}
+}

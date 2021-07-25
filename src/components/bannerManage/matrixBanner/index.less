@@ -1,0 +1,21 @@
+#matrixBanner {
+	padding-top: 680px;
+	width: 1280px;
+	margin: auto;
+
+	.swiper-pagination-custom {
+		position: relative;
+		bottom: 25px;
+	}
+
+	@media screen and (max-width: 750px) {
+		& {
+			width: 100%;
+			padding-top: 5rem;
+
+			.swiper-pagination-custom {
+				bottom: .25rem;
+			}
+		}
+	}
+}

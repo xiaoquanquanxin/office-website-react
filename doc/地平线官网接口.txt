@@ -1,0 +1,351 @@
+﻿1、获取banner
+## 请求URL
+/getbanner
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+type=>1 => '首页-头部', 2 => '首页-中部',3=>'首页-底部',4=>'新闻中心',5=>'关于我们'
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|img=>图片地址，title=>标题，second=>停留时间，为空则不用，url为外链，为空则不用
+ 
+ 2、获取新闻分类
+## 请求URL
+/getnewscategory
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|img=>icon图，name=>名称
+ 
+ 4、获取新闻列表
+## 请求URL
+/getnewslist
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+category_id=>类别，为空则是全部
+page=>页码
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|title=>标题，thumb=>缩略图，publish_date=>发布时间，keywords=>关键词
+ relate|array|相关推荐新闻，title=>标题，thumb=>缩略图，publish_date=>发布时间，keywords=>关键词
+ 
+ 5、获取新闻详细
+## 请求URL
+/getnewsdetail
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+id=>新闻id
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|title=>标题，thumb=>缩略图，publish_date=>发布时间，keywords=>关键词,content=>新闻详细内容
+ relate|array|相关推荐
+ 
+ 6、首页接口
+## 请求URL
+/getindex
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ top_banner|array|头部banner
+ middle_banner|array|中部banner
+ bottom_banner|array|底部banner
+ client|array|赋能客户
+ 
+  7、关于我们接口
+## 请求URL
+/getaboutus
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ aboutus|array|公司简介，desc=>简述，content=>介绍内容，img=>图片
+ history|array|发展历程，date=>时间，title=>标题内容
+ invest|array|投资阵容，img=>logo图片，name=>名称
+ contact|array|联系我们
+ addr|array|地址，city=>城市，name=>名称，mobile=>联系电话，addr=>详细地址
+
+
+ 8、产品中心管理-天工开物管理-合作伙伴接口
+## 请求URL
+/getproductpartner
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|name=>名称，img=>图片
+
+9、解决方案管理-高级别辅助驾驶管理-客户案例接口
+## 请求URL
+/getdriverclient
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|name=>名称，img=>图片，title=>标题，desc=>描述
+
+10、解决方案管理-智能座舱管理-合作伙伴接口
+## 请求URL
+/getcockpitpartner
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|name=>名称，img=>图片
+
+11、解决方案管理-高精地图管理-客户案例接口
+## 请求URL
+/getmapclient
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|name=>名称，img=>图片
+
+12、解决方案管理-智能物联网管理-合作伙伴接口
+## 请求URL
+/getiotpartner
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|name=>名称，img=>图片
+ 
+ 
+ 12、解决方案管理-智能物联网管理-合作伙伴接口
+## 请求URL
+/getiotpartner
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|name=>名称，img=>图片
+ 
+13、底部内容接口
+## 请求URL
+/getfooter
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+无
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ product|array|产品中心数组，name=>名称，url地址
+ solution|array|解决方案数组，name=>名称，url地址
+aboutus|array|关于我们数组，name=>名称，url地址
+ data|array|left_top_title=>底部左上标题,left_top_content=>底部左上内容,left_bottom_title=>底部左下标题,left_bottom_content=>底部左下内容,copy_right=>底部版权,qrcode=>地平线官微二维码,zp_qrcode=>地平线招聘号二维码
+
+
+
+14、seo内容接口
+## 请求URL
+/getseo
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+nav_id=>getnav接口返回的data数组的id,对应每个页面
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ 
+ 
+
+
+
+
+
+
+
+
+❓❓❓❓❓❓❓❓❓❓❓❓❓❓
+ 15、获取页面文案接口
+## 请求URL
+/getpagecontent
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+name=>对应名称，“核心技术，征程3，征程2，旭日3，旭日2，Matrix，天工开物，高级别辅助驾驶，自动驾驶，智能座舱，高精地图，智能物联网”
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|页面文案内容，多块按顺序排列，title=>标题，title2=>副标题,desc=>内容，img=>图片，video=>视频，content=>特殊内容
+
+
+
+ ❓❓❓❓❓❓❓❓❓❓❓❓❓❓
+ 16、获取图片标题接口
+## 请求URL
+/getimgtitle
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+name=>对应名称，“核心技术，征程3，征程2，旭日3，旭日2，Matrix，天工开物，高级别辅助驾驶，智能座舱，高精地图，智能物联网”
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|图片标题内容，多块按顺序排列，img=>图片，title=>标题，desc=>描述，more=>更多
+ 
+ 17、获取客户案例接口
+## 请求URL
+/getclientcase
+
+## 支持格式
+JSON
+
+## HTTP请求方式
+get
+## 请求参数
+type=>对应类型，119=>核心技术,120=>征程3,121=>征程2,122=>旭日3,123=>旭日2,124=>Matrix,125=>高级别辅助驾驶,126=>智能座舱,127=>高精地图-应用场景,128=>高精地图-客户案例,129=>智能物联网
+## 返回字段说明
+返回值字段 | 字段类型 | 字段说明
+------------|---| -------------
+ code | int | 返回代码，负数全部为失败
+ msg  | string | 返回说明
+ data|array|客户案例内容，img=>图片，title=>标题，title2=>副标题，desc=>内容，img=>图片，video=>视频
+
+ 
+ 
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 

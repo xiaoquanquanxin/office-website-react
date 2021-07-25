@@ -1,0 +1,68 @@
+//	容器
+.swiper-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	////	每一项
+	//.swiper-slide-grab {
+	//	//	抚摸应该是手
+	//	cursor: grab;
+	//}
+
+	//	分页
+	.swiper-pagination-custom {
+		text-align: center;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 2;
+		line-height: 0;
+		//  原点
+		span {
+			width: 8px;
+			height: 8px;
+			//	todo	颜色问题
+			background-color: rgba(175, 175, 175, 0.42);
+			//background-color: #DBDBDB;
+			border-radius: 100px;
+			margin: 0 12px;
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+
+			//	激活的
+			&.active-pagination {
+				width: 64px;
+			}
+
+			i {
+				display: block;
+				height: 100%;
+				width: 0;
+				background-color: #0066ff;
+				border-radius: 100px;
+			}
+		}
+	}
+}
+
+//  移动端
+@media screen and (max-width: 750px) {
+	.swiper-container {
+		.swiper-pagination-custom {
+			span {
+				width: 0.08rem;
+				height: 0.08rem;
+				margin: 0 0.12rem;
+				//  激活态 原点大小
+				&.active-pagination {
+					width: .64rem;
+				}
+			}
+		}
+	}
+}
+
+

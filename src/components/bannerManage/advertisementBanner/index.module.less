@@ -1,0 +1,126 @@
+.container {
+	min-width: 1080px;
+	margin: 0 auto;
+	padding-bottom: 68px;
+	//	标题
+	.title {
+		font-size: 40px;
+		color: var(--black);
+		text-align: center;
+		line-height: 70px;
+		padding: 90px 0 50px 0;
+	}
+
+	//	轮播
+	.customerList {
+		width: 1080px;
+		margin: 0 auto;
+
+		.swiperItem {
+			width: 200px;
+			overflow: hidden;
+			margin: 20px 20px 0 0;
+			float: left;
+
+			&:nth-child(5n) {
+				margin-right: 0;
+			}
+
+			img {
+				width: 100%;
+				//	height: 149px;
+				height: auto;
+				display: block;
+			}
+		}
+	}
+
+	//	首页
+	&.index {
+		background: linear-gradient(90deg, rgba(10, 17, 33, 1) 0%, rgba(18, 25, 41, 1) 100%);
+
+		.title {
+			color: var(--white);
+		}
+	}
+
+	//	天工开物
+	&.open {
+		background-color: var(--white);
+	}
+
+	//	合作伙伴、关于我们
+	&.partner, &.about {
+		background-color: var(--colorf9);
+	}
+
+	//	关于我们
+	&.about {
+		.title {
+			font-size: 24px;
+		}
+	}
+
+	&.open, &.partner, &.about {
+		.swiperItem {
+			border-radius: 6px
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.container {
+		margin: auto;
+		min-width: 0;
+
+		.title {
+			line-height: 0.5rem;
+			font-size: 0.36rem;
+			padding: 0.45rem 0 0.25rem 0;
+		}
+
+		.customerList {
+			width: 6.75rem;
+			margin: auto;
+
+			.swiperItem {
+				width: 1.58rem;
+				margin: 1% 0 0 1%;
+
+				&:nth-child(4n) {
+					margin-right: 0;
+				}
+
+				img {
+					height: auto;
+				}
+			}
+		}
+
+		&.open, &.partner, &.about {
+			.swiperItem {
+				border-radius: 0.06rem;
+			}
+		}
+
+		&.index, &.open, &.partner, &.about {
+			padding-bottom: 0.8rem;
+			.title {
+				font-size: 0.4rem;
+				font-weight: 500;
+				line-height: 0.56rem;
+				padding: 1rem 0 0.4rem !important;
+			}
+			.customerList {
+				width: 100%;
+				margin: 0 0.28rem;
+				.swiperItem {
+					width: 1.64rem;
+					margin: 0.14rem 0.14rem 0 0;
+				}
+			}
+		}
+	}
+}
+
+
