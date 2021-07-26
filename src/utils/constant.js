@@ -44,8 +44,8 @@ export const SUNRISE3 = { name: '旭日3', type: 122 };
 
 //  omni    todo    缺一个用户案例接口参数type
 export const OMNI = { name: 'omni', type: -1 };
-//  superdrive      todo    缺一个用户案例接口参数type
-export const SUPERDRIVE = { name: 'superdrive', type: -1 };
+//  超级驾驶      todo    缺一个用户案例接口参数type
+export const SUPERDRIVE = { name: '超级驾驶', type: -1 };
 
 //  页面pathName
 export const pathNameList = [
