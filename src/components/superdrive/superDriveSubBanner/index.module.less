@@ -1,0 +1,148 @@
+.superDriveSubBanner {
+    display: flex;
+    justify-content: space-between;
+    color: var(--colorgray);
+    background: var(--color1a1a1a);
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+
+    .superDriveSubBannerItem {
+        width: 25%;
+        height: 440px;
+        border: 1px dashed var(--colorgray);
+        border-right: none;
+        text-align: center;
+        padding: 94px 30px 86px;
+
+        &:last-child {
+            border-right: 1px dashed var(--colorgray);
+        }
+
+        &:nth-child(1) {
+            background-image: url('~@media/superdrive/superDriveSubBanner/sub1@2x.png');
+
+            .superDriveSubBannerIcon {
+                background-image: url('~@media/superdrive/superDriveSubBanner/core@2x.png');
+            }
+        }
+
+        &:nth-child(2) {
+            background-image: url('~@media/superdrive/superDriveSubBanner/sub2@2x.png');
+
+            .superDriveSubBannerIcon {
+                background-image: url('~@media/superdrive/superDriveSubBanner/ai@2x.png');
+            }
+        }
+
+        &:nth-child(3) {
+            background-image: url('~@media/superdrive/superDriveSubBanner/sub3@2x.png');
+
+            .superDriveSubBannerIcon {
+                background-image: url('~@media/superdrive/superDriveSubBanner/cloud@2x.png');
+            }
+        }
+
+        &:nth-child(4) {
+            background-image: url('~@media/superdrive/superDriveSubBanner/sub4@2x.png');
+
+            .superDriveSubBannerIcon {
+                background-image: url('~@media/superdrive/superDriveSubBanner/car@2x.png');
+            }
+        }
+
+
+        //  Icon
+        .superDriveSubBannerIcon {
+            width: 58px;
+            height: 58px;
+            background-size: contain;
+            background-position: center;
+            margin: auto;
+            background-repeat: no-repeat;
+        }
+
+        //  标题
+        .superDriveSubBannerTitle {
+            font-size: 21px;
+            padding: 18px 0;
+        }
+
+        .superDriveSubBannerSpliter {
+            width: 56px;
+            height: 3px;
+            margin: auto;
+            background-image: url('~@media/superdrive/superDriveSubBanner/spliter@2x.png');
+        }
+
+        //  描述
+        .superDriveSubBannerDesc {
+            padding-top: 29px;
+            font-size: 16px;
+            line-height: 1.625em;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+
+        .superDriveSubBannerItem {
+            height: 2.57rem;
+            padding: .54rem .25rem .5rem;
+
+            &:nth-child(1) {
+                background-image: url('~@media/superdrive/superDriveSubBanner/sub1.png');
+
+                .superDriveSubBannerIcon {
+                    background-image: url('~@media/superdrive/superDriveSubBanner/core.png');
+                }
+            }
+
+            &:nth-child(2) {
+                background-image: url('~@media/superdrive/superDriveSubBanner/sub2.png');
+
+                .superDriveSubBannerIcon {
+                    background-image: url('~@media/superdrive/superDriveSubBanner/ai.png');
+                }
+            }
+
+            &:nth-child(3) {
+                background-image: url('~@media/superdrive/superDriveSubBanner/sub3.png');
+
+                .superDriveSubBannerIcon {
+                    background-image: url('~@media/superdrive/superDriveSubBanner/cloud.png');
+                }
+            }
+
+            &:nth-child(4) {
+                background-image: url('~@media/superdrive/superDriveSubBanner/sub4.png');
+
+                .superDriveSubBannerIcon {
+                    background-image: url('~@media/superdrive/superDriveSubBanner/car.png');
+                }
+            }
+
+            .superDriveSubBannerIcon {
+                width: .34rem;
+                height: .34rem;
+            }
+
+            //  标题
+            .superDriveSubBannerTitle {
+                font-size: .12rem;
+                padding: .09rem 0;
+            }
+
+            .superDriveSubBannerSpliter {
+                background-image: url('~@media/superdrive/superDriveSubBanner/spliter.png');
+
+            }
+
+            //  描述
+            .superDriveSubBannerDesc {
+                padding-top: .17rem;
+                font-size: .09rem;
+            }
+        }
+    }
+}
+
+
