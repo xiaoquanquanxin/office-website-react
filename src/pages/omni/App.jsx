@@ -1,36 +1,32 @@
 import React from 'react';
-import { BasicHeader } from '@components/basicHeader';
-import { BasicFooter } from '@components/basicFooter';
-import { connect } from 'react-redux';
-import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
+import {BasicHeader} from '@components/basicHeader';
+import {BasicFooter} from '@components/basicFooter';
+import {connect} from 'react-redux';
+import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
 import {
     requestGetClientCase,
     requestGetImgTitle,
     requestGetPageContent
-} from '@api/index';
+} from '@api';
 import {
     clipData,
     commonRelativeWideFn,
     getBrowserInfo,
     setListJSONData
 } from '@utils/utils';
-import { BannerManage } from '@components/bannerManage';
-import { ScrollFixed } from '@components/scrollFixed';
-import { FixedBarBox } from '@components/fixedBarBox';
-import { ADAS, NAV_CAT_ID } from '@utils/constant';
-import { CustomerCase } from '@components/CustomerCase';
-import { FourBlocks } from '@components/fourBlocks';
-import { JourneyAlgorithm } from '@components/adas/journeyAlgorithm';
-import { VideoWrap } from '@components/video';
-// import { EnablingMode } from '@components/adas/enablingMode';
-// import { ProductSetting } from '@components/adas/productSetting';
-// import { UseScene } from '@components/adas/useScene';
-// import { ModuleNav } from '@components/open-explorer/moduleNav';
-import { GetMoreBox } from '@components/getMoreBox';
-import { PopForm } from '@components/popForm';
-import { Toast } from '@components/toast';
+import {BannerManage} from '@components/bannerManage';
+import {ScrollFixed} from '@components/scrollFixed';
+import {FixedBarBox} from '@components/fixedBarBox';
+import {ADAS, NAV_CAT_ID} from '@utils/constant';
+import {CustomerCase} from '@components/CustomerCase';
+import {FourBlocks} from '@components/fourBlocks';
+import {JourneyAlgorithm} from '@components/adas/journeyAlgorithm';
+import {VideoWrap} from '@components/video';
+import {GetMoreBox} from '@components/getMoreBox';
+import {PopForm} from '@components/popForm';
+import {Toast} from '@components/toast';
 import './index.less';
-import { HigherLevelAutoDriving } from '@components/omni/higherLevelAutoDriving';
+import {HigherLevelAutoDriving} from '@components/omni/higherLevelAutoDriving';
 
 export default connect(
     mapStateToProps,
@@ -51,7 +47,7 @@ export default connect(
             commonRelativeWideFn(this.props.setRelativeWideFn);
             //  页面滚动监听
             getBrowserInfo(this.props.setBrowserScrollInfoFn);
-            const { setBarBoxAnchorList } = props;
+            const {setBarBoxAnchorList} = props;
             //  2021-07-25
             setBarBoxAnchorList(['', '']);
         }
@@ -69,7 +65,7 @@ export default connect(
                                 //  征程2 视觉感知算法
                                 jAData: Object.assign({}, state.jAData, data[0]),
                                 //
-                                higherLevelAutoDrivingData:Object.assign({},{}),
+                                higherLevelAutoDrivingData: Object.assign({}, {}),
                                 //  客户案例
                                 customerCaseData: Object.assign({}, state.customerCaseData, data[4]),
                             };
@@ -93,14 +89,14 @@ export default connect(
                     .then(data => {
                         this.setState((state) => {
                             return {
-                                customerCaseData: Object.assign({}, state.customerCaseData, { list: data })
+                                customerCaseData: Object.assign({}, state.customerCaseData, {list: data})
                             };
                         });
 
                     }),
             ])
                 .then(() => {
-                    const { setComponentDidMountFinish } = this.props;
+                    const {setComponentDidMountFinish} = this.props;
                     //  父组件初始化完成
                     setComponentDidMountFinish(true);
                     //    console.log('setState结果是🍎', this.state);
@@ -117,31 +113,31 @@ export default connect(
             return (
                 <div className="App">
                     {/*头部*/}
-                    <BasicHeader onceHeader={{ isOnce: false }} />
+                    <BasicHeader onceHeader={{isOnce: false}}/>
                     {/*合作咨询定位组件*/}
-                    <ScrollFixed RenderElement={FixedBarBox} />
+                    <ScrollFixed RenderElement={FixedBarBox}/>
                     {/*轮播*/}
-                    <BannerManage bannerType={13} />
+                    <BannerManage bannerType={13}/>
                     {/*四个一块*/}
-                    <div id="m1" pc={60} mobile={80} />
-                    <FourBlocks data={cdrbData} isLight={true} />
+                    <div id="m1" pc={60} mobile={80}/>
+                    <FourBlocks data={cdrbData} isLight={true}/>
                     {/*征程2 视觉感知算法*/}
-                    <JourneyAlgorithm jAData={jAData} />
+                    <JourneyAlgorithm jAData={jAData}/>
                     {/*Horizon Omni c*/}
                     <HigherLevelAutoDriving higherLevelAutoDrivingData={higherLevelAutoDrivingData}/>
-                    <div id="m2" pc={60} />
+                    <div id="m2" pc={60}/>
                     {/*客户案例*/}
-                    <CustomerCase customerCaseData={customerCaseData} />
+                    <CustomerCase customerCaseData={customerCaseData}/>
                     {/*视频本身*/}
-                    <VideoWrap />
+                    <VideoWrap/>
                     {/*更多*/}
-                    <GetMoreBox isGrey={true} />
+                    <GetMoreBox isGrey={true}/>
                     {/*表单*/}
-                    <PopForm />
+                    <PopForm/>
                     {/*toast*/}
-                    <Toast />
+                    <Toast/>
                     {/*脚部*/}
-                    <BasicFooter />
+                    <BasicFooter/>
                 </div>
             );
         }
