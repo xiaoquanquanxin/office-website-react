@@ -42,7 +42,7 @@ export const JOURNEY2 = { name: '征程2', type: 121 };
 //  旭日3
 export const SUNRISE3 = { name: '旭日3', type: 122 };
 
-//  omni    todo
+//  omni    todo    缺一个用户案例
 export const OMNI = { name: 'omni', type: -1 };
 
 //  页面pathName
