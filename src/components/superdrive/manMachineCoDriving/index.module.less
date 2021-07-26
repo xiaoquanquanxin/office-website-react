@@ -1,0 +1,125 @@
+.manMachineCoDriving {
+    padding-top: 80px;
+    padding-bottom: 56px;
+    background: #1A1A1A;
+
+    .manMachineCoDrivingList {
+        display: flex;
+        justify-content: space-between;
+        width: 1160px;
+        margin: auto;
+
+        .manMachineCoDrivingItem {
+            width: 213px;
+            text-align: center;
+
+            //  图片
+            .manMachineCoDrivingImg {
+                display: block;
+                width: 100%;
+                height: 240px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            //  title
+            .manMachineCoDrivingTitle {
+                padding-top: 1.8em;
+                padding-bottom: .8em;
+                font-size: 18px;
+                color: var(--white);
+            }
+
+            .manMachineCoDrivingDesc {
+                font-size: 14px;
+                line-height: 1.8em;
+                color: var(--colorgray);
+            }
+        }
+
+        .manMachineCoDrivingItem:nth-child(1) {
+            .manMachineCoDrivingImg {
+                background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img01.png);
+            }
+        }
+
+        .manMachineCoDrivingItem:nth-child(2) {
+            .manMachineCoDrivingImg {
+                background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img02.png);
+            }
+        }
+
+        .manMachineCoDrivingItem:nth-child(3) {
+            .manMachineCoDrivingImg {
+                background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img03.png);
+            }
+        }
+
+        .manMachineCoDrivingItem:nth-child(4) {
+            .manMachineCoDrivingImg {
+                background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img04.png);
+            }
+        }
+
+        .manMachineCoDrivingItem:nth-child(5) {
+            .manMachineCoDrivingImg {
+                background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img05.png);
+            }
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        padding-top: 1.06rem;
+        padding-bottom: .7rem;
+        .manMachineCoDrivingList {
+            width: 6.81rem;
+
+            .manMachineCoDrivingItem {
+                width: 1.25rem;
+                //  图片
+                .manMachineCoDrivingImg {
+                    height: 1.41rem;
+                }
+
+                .manMachineCoDrivingTitle {
+                    font-size: .18rem;
+                }
+
+                .manMachineCoDrivingDesc {
+                    font-size: .14rem;
+                }
+            }
+
+            .manMachineCoDrivingItem:nth-child(1) {
+                .manMachineCoDrivingImg {
+                    background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img01@2x.png);
+                }
+            }
+
+            .manMachineCoDrivingItem:nth-child(2) {
+                .manMachineCoDrivingImg {
+                    background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img02@2x.png);
+                }
+            }
+
+            .manMachineCoDrivingItem:nth-child(3) {
+                .manMachineCoDrivingImg {
+                    background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img03@2x.png);
+                }
+            }
+
+            .manMachineCoDrivingItem:nth-child(4) {
+                .manMachineCoDrivingImg {
+                    background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img04@2x.png);
+                }
+            }
+
+            .manMachineCoDrivingItem:nth-child(5) {
+                .manMachineCoDrivingImg {
+                    background-image: url(~@media/superdrive/manMachineCoDriving/matrix-img05@2x.png);
+                }
+            }
+        }
+    }
+}
