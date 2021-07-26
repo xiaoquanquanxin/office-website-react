@@ -18,15 +18,10 @@ import {BannerManage} from '@components/bannerManage';
 import {ScrollFixed} from '@components/scrollFixed';
 import {FixedBarBox} from '@components/fixedBarBox';
 import {ADAS, NAV_CAT_ID} from '@utils/constant';
-import {CustomerCase} from '@components/CustomerCase';
-import {FourBlocks} from '@components/fourBlocks';
-import {JourneyAlgorithm} from '@components/adas/journeyAlgorithm';
-import {VideoWrap} from '@components/video';
 import {GetMoreBox} from '@components/getMoreBox';
 import {PopForm} from '@components/popForm';
 import {Toast} from '@components/toast';
 import './index.less';
-import {HigherLevelAutoDriving} from '@components/omni/higherLevelAutoDriving';
 import {SolutionArchitecture} from "@components/superdrive/solutionArchitecture";
 import {SuperDriveSystemArchitecture} from "@components/superdrive/superDriveSystemArchitecture";
 import {ManMachineCoDriving} from "@components/superdrive/manMachineCoDriving";
@@ -109,10 +104,10 @@ export default connect(
 
         render() {
             const {
-                cdrbData,
-                customerCaseData,
-                jAData,
-                higherLevelAutoDrivingData,
+                // cdrbData,
+                // customerCaseData,
+                // jAData,
+                // higherLevelAutoDrivingData,
             } = this.state;
             return (
                 <div className="App">
