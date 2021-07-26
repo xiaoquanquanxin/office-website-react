@@ -4,7 +4,7 @@ import {mapDispatchToProps, mapStateToProps} from "@store/reduxMap";
 import {BasicTitleDesc} from "@components/basicTitleDesc";
 import style from "./index.module.less";
 
-//  全能光驱
+//  方案架构
 export const SolutionArchitecture = connect(
     mapStateToProps,
     mapDispatchToProps,
