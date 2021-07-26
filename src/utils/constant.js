@@ -42,6 +42,9 @@ export const JOURNEY2 = { name: '征程2', type: 121 };
 //  旭日3
 export const SUNRISE3 = { name: '旭日3', type: 122 };
 
+//  omni    todo
+export const OMNI = { name: 'omni', type: -1 };
+
 //  页面pathName
 export const pathNameList = [
     '',
