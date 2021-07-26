@@ -42,8 +42,10 @@ export const JOURNEY2 = { name: '征程2', type: 121 };
 //  旭日3
 export const SUNRISE3 = { name: '旭日3', type: 122 };
 
-//  omni    todo    缺一个用户案例
+//  omni    todo    缺一个用户案例接口参数type
 export const OMNI = { name: 'omni', type: -1 };
+//  superdrive      todo    缺一个用户案例接口参数type
+export const SUPERDRIVE = { name: 'superdrive', type: -1 };
 
 //  页面pathName
 export const pathNameList = [
@@ -65,5 +67,6 @@ export const pathNameList = [
     'sunrise2.html',
     'sunrise3.html',
     'technology.html',
-    'omni.html'
+    'omni.html',
+    'superdrive.html'
 ];
