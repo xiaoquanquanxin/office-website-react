@@ -117,6 +117,7 @@ export default connect(
                     {/*合作咨询定位组件*/}
                     <ScrollFixed RenderElement={FixedBarBox}/>
                     {/*轮播*/}
+                    {/*todo 发请求的id*/}
                     <BannerManage bannerType={13}/>
                     {/*四个一块*/}
                     <div id="m1" pc={60} mobile={80}/>
