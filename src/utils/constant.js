@@ -17,35 +17,37 @@ export const NAV_CAT_ID = 'nav_cat_id';
 
 //  各个页面请求接口的参数
 //  matrix
-export const MATRIX = { name: 'Matrix', type: 119 };
+export const MATRIX = {name: 'Matrix', type: 119};
 //  天工开物
-export const OPEN_EXPLORER = { name: '天工开物' };
+export const OPEN_EXPLORER = {name: '天工开物'};
 //  征程3
-export const JOURNEY3 = { name: '征程3', type: 120 };
+export const JOURNEY3 = {name: '征程3', type: 120};
 //  旭日2
-export const SUNRISE2 = { name: '旭日2', type: 123 };
+export const SUNRISE2 = {name: '旭日2', type: 123};
 //  智能物联网
-export const AIOT = { name: '智能物联网', type: 129 };
+export const AIOT = {name: '智能物联网', type: 129};
 //  高级别辅助驾驶
-export const ADAS = { name: '高级别辅助驾驶', type: 125 };
+export const ADAS = {name: '高级别辅助驾驶', type: 125};
 //  自动驾驶
-export const AUTONOMOUS_DRIVING = { name: '自动驾驶', type: 132 };
+export const AUTONOMOUS_DRIVING = {name: '自动驾驶', type: 132};
 //  智能座舱
-export const INTELLIGENT_COCKPIT = { name: '智能座舱', type: 126 };
+export const INTELLIGENT_COCKPIT = {name: '智能座舱', type: 126};
 //  高精地图
-export const NAVINET = { name: '高精地图', type1: 127, type2: 128 };
+export const NAVINET = {name: '高精地图', type1: 127, type2: 128};
 
 //  核心技术
-export const TECHNOLOGY = { name: '核心技术', type: 119 };
+export const TECHNOLOGY = {name: '核心技术', type: 119};
 //  征程2
-export const JOURNEY2 = { name: '征程2', type: 121 };
+export const JOURNEY2 = {name: '征程2', type: 121};
 //  旭日3
-export const SUNRISE3 = { name: '旭日3', type: 122 };
+export const SUNRISE3 = {name: '旭日3', type: 122};
 
 //  omni    todo    缺一个用户案例接口参数type
-export const OMNI = { name: 'omni', type: -1 };
+export const OMNI = {name: 'omni', type: -1};
 //  超级驾驶      todo    缺一个用户案例接口参数type
-export const SUPERDRIVE = { name: '超级驾驶', type: -1 };
+export const SUPERDRIVE = {name: '超级驾驶', type: -1};
+//  征程5     todo    缺一个用户案例接口参数type
+export const JOURNEY5 = {name: '征程5', type: -1};
 
 //  页面pathName
 export const pathNameList = [
@@ -68,5 +70,6 @@ export const pathNameList = [
     'sunrise3.html',
     'technology.html',
     'omni.html',
-    'superdrive.html'
+    'superdrive.html',
+    'journey5.html',
 ];
