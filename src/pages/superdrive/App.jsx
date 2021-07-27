@@ -17,7 +17,7 @@ import {
 import {BannerManage} from '@components/bannerManage';
 import {ScrollFixed} from '@components/scrollFixed';
 import {FixedBarBox} from '@components/fixedBarBox';
-import {ADAS, NAV_CAT_ID} from '@utils/constant';
+import {SUPERDRIVE, NAV_CAT_ID} from '@utils/constant';
 import {GetMoreBox} from '@components/getMoreBox';
 import {PopForm} from '@components/popForm';
 import {Toast} from '@components/toast';
@@ -36,12 +36,14 @@ export default connect(
         constructor(props) {
             super(props);
             this.state = {
-                //  四个一块的
-                cdrbData: null,
-                //  征程2 视觉感知算法
-                jAData: null,
-                //  客户案例
-                customerCaseData: null,
+                //  超级驾驶二级banner
+                superDriveSubBannerData: null,
+                //  方案架构
+                solutionArchitectureData: null,
+                //  系统架构
+                superDriveSystemArchitectureData: null,
+                //  Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾
+                manMachineCoDrivingData: null,
             };
             //  页面宽度监听
             commonRelativeWideFn(this.props.setRelativeWideFn);
@@ -52,43 +54,36 @@ export default connect(
         }
 
         componentDidMount() {
-            //  ADAS
+            //  SUPERDRIVE
             Promise.all([
                 //  获取页面文案接口
-                requestGetPageContent(ADAS.name)
+                requestGetPageContent(SUPERDRIVE.name)
                     .then(data => {
-                        setListJSONData(data[0]);
-                        setListJSONData(data[1]);
                         this.setState((state) => {
                             return {
-                                //  征程2 视觉感知算法
-                                jAData: Object.assign({}, state.jAData, data[0]),
-                                //
-                                higherLevelAutoDrivingData: Object.assign({}, {}),
-                                //  客户案例
-                                customerCaseData: Object.assign({}, state.customerCaseData, data[4]),
+                                //  方案架构
+                                solutionArchitectureData: Object.assign({}, state.solutionArchitectureData, data[0]),
+                                //  系统架构
+                                superDriveSystemArchitectureData: Object.assign({}, state.superDriveSystemArchitectureData, data[1]),
+                                //  Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾
+                                manMachineCoDrivingData: Object.assign({}, state.manMachineCoDrivingData, data[2]),
                             };
                         });
                     }),
                 //  获取图片标题接口
-                requestGetImgTitle(ADAS.name)
+                requestGetImgTitle(SUPERDRIVE.name)
                     .then(data => {
-                        //  四个一块的
-                        const cdrbData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+                        //  Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾
+                        const manMachineCoDrivingData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+                        //  超级驾驶二级banner
+                        const superDriveSubBannerData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+                        console.log(superDriveSubBannerData);
                         this.setState((state) => {
                             return {
-                                //  四个一块的
-                                cdrbData: Object.assign([], state.cdrbData, cdrbData),
-                            };
-                        });
-
-                    }),
-                //  客户案例
-                requestGetClientCase(ADAS.type)
-                    .then(data => {
-                        this.setState((state) => {
-                            return {
-                                customerCaseData: Object.assign({}, state.customerCaseData, {list: data})
+                                //  Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾
+                                manMachineCoDrivingData: Object.assign({}, state.manMachineCoDrivingData, {list: manMachineCoDrivingData}),
+                                //  超级驾驶二级banner
+                                superDriveSubBannerData: Object.assign([], state.superDriveSubBannerData, superDriveSubBannerData),
                             };
                         });
 
@@ -104,10 +99,10 @@ export default connect(
 
         render() {
             const {
-                // cdrbData,
-                // customerCaseData,
-                // jAData,
-                // higherLevelAutoDrivingData,
+                superDriveSubBannerData,
+                solutionArchitectureData,
+                superDriveSystemArchitectureData,
+                manMachineCoDrivingData,
             } = this.state;
             return (
                 <div className="App">
@@ -121,15 +116,14 @@ export default connect(
                     <div id="m1" pc={60} mobile={80}/>
 
                     {/*超级驾驶二级banner*/}
-                    <SuperDriveSubBanner/>
+                    <SuperDriveSubBanner superDriveSubBannerData={superDriveSubBannerData}/>
                     {/*方案架构*/}
-                    <SolutionArchitecture/>
+                    <SolutionArchitecture solutionArchitectureData={solutionArchitectureData}/>
                     {/*系统架构*/}
-                    <SuperDriveSystemArchitecture/>
-                    {/*Horizon Matrix  超级驾驶解决方案 实现全场景自动驾驶 & 人机共驾*/}
-                    <ManMachineCoDriving/>
+                    <SuperDriveSystemArchitecture superDriveSystemArchitectureData={superDriveSystemArchitectureData}/>
+                    {/*Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾*/}
+                    <ManMachineCoDriving manMachineCoDrivingData={manMachineCoDrivingData}/>
                     <div id="m2" pc={60}/>
-
 
                     {/*更多*/}
                     <GetMoreBox isGrey={true}/>
