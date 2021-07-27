@@ -44,10 +44,10 @@ export const SUNRISE3 = {name: '旭日3', type: 122};
 
 //  omni
 export const OMNI = {name: 'omni', type: 141};
-//  超级驾驶      todo    缺一个用户案例接口参数type
-export const SUPERDRIVE = {name: '超级驾驶', type: -1};
-//  征程5     todo    缺一个用户案例接口参数type
-export const JOURNEY5 = {name: '征程5', type: -1};
+//  超级驾驶      没有客户案例
+export const SUPERDRIVE = {name: 'superdrive', };
+//  征程5      没有客户案例
+export const JOURNEY5 = {name: '征程5',};
 
 //  页面pathName
 export const pathNameList = [
