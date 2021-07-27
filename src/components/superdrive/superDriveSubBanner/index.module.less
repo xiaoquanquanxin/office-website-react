@@ -7,6 +7,7 @@
     padding-right: calc(50% - 640px);
 
     .superDriveSubBannerItem {
+        position: relative;
         width: 25%;
         height: 440px;
         border: 1px dashed var(--colorgray);
@@ -15,7 +16,7 @@
         padding: 168px 30px 86px;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position:top center ;
+        background-position: center;
 
         &:last-child {
             border-right: 1px dashed var(--colorgray);
@@ -87,8 +88,8 @@
     @media screen and (max-width: 750px) {
 
         .superDriveSubBannerItem {
-            height: auto;
-            padding: 1.3rem .2rem .5rem;
+            height: 3.4rem;
+            padding: 0 .25rem;
 
             //&:nth-child(1) {
             //    background-image: url(~@media/superdrive/superDriveSubBanner/sub1.png);
@@ -130,6 +131,8 @@
             //  标题
             .superDriveSubBannerTitle {
                 font-size: .12rem;
+                position: relative;
+                top: 1.4rem;
             }
 
             //.superDriveSubBannerSpliter {
@@ -143,6 +146,8 @@
                 padding-top: .32rem;
                 font-size: .12rem;
                 line-height: .24rem;
+                position: relative;
+                top: 1.2rem;
             }
         }
     }
