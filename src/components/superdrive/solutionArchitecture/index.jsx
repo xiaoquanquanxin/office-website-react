@@ -13,7 +13,6 @@ export const SolutionArchitecture = connect(
         return (
             <div id='solutionArchitecture' className={style.solutionArchitecture}>
                 <BasicTitleDesc data={data} isLight={true}/>
-                <br/>
                 <div className={style.content}>
                     <div className={style.contentImg}/>
                 </div>
