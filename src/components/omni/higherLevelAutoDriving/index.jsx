@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
 import style from './index.module.less';
 import {BasicTitleDesc} from '@components/basicTitleDesc';
+import {hasTitleAndImg} from "@utils/utils";
 
 // const list = [
 //     [
@@ -31,15 +32,16 @@ export const HigherLevelAutoDriving = connect(
 )(({
        higherLevelAutoDrivingData,
    }) => {
-        const data = {title: 'Horizon Omni 赋能更高级别自动驾驶'};
-        if (!higherLevelAutoDrivingData) {
-            return null;
+        //  如果没有数据，或者没有title，或者没有img
+        if (!hasTitleAndImg(higherLevelAutoDrivingData)) {
+            return
         }
         return (
             <div id='higherLevelAutoDriving' className={style.higherLevelAutoDriving}>
-                <BasicTitleDesc data={data} isLight={true}/>
+                <BasicTitleDesc data={higherLevelAutoDrivingData} isLight={true}/>
                 <div className={style.content}>
-                    <div className={style.contentImg} style={{backgroundImage: higherLevelAutoDrivingData.img || null}}/>
+                    <div className={style.contentImg}
+                         style={{backgroundImage: `url(${higherLevelAutoDrivingData.img || ''})`}}/>
                     {/*    <ul className={style.contentList}>*/}
                     {/*        {contentList}*/}
                     {/*    </ul>*/}
