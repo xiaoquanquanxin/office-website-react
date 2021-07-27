@@ -57,35 +57,38 @@ const manMachineCoDrivingData = [
         ]
     }
 ]
-//  系统架构
+//  Horizon Matrix  超级驾驶解决方案 实现全场景自动驾驶 & 人机共驾 .md
 export const ManMachineCoDriving = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(({}) => {
-        const data = {
-            title: 'Horizon Matrix  超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾',
-            desc: '·从城区到高速，从启动到泊车，人机共驾让每一次驾驶更轻松   ·个性化的智能交互以及整车智能，让驾驶者更加安心、更加舒适'
-        };
-
-        const manMachineCoDrivingList = manMachineCoDrivingData.map(((item, index) => {
-            const descList = item.desc.map((desc, _index) => {
-                return (
-                    <p key={_index} className={style.manMachineCoDrivingDesc}>{desc}</p>
-                )
-            })
+)(({
+       manMachineCoDrivingData
+   }) => {
+        if (!manMachineCoDrivingData) {
+            return null;
+        }
+        const manMachineCoDrivingList = (manMachineCoDrivingData.list || []).map(((item, index) => {
+            //  替换\r\n
+            if (item.desc) {
+                item._desc = item.desc
+                    .replace(/(\r)/ig, '\n')
+                    .replace(/\n\n/ig, '<br/>');
+            }
             return (
                 <li key={index} className={style.manMachineCoDrivingItem}>
                     <div className={style.manMachineCoDrivingImg}/>
                     <div>
                         <p className={style.manMachineCoDrivingTitle}>{item.title}</p>
-                        {descList}
+                        {/*{descList}*/}
+                        <p className={style.manMachineCoDrivingDesc}
+                           dangerouslySetInnerHTML={{__html: item._desc}}/>
                     </div>
                 </li>
             )
         }))
         return (
             <div id='manMachineCoDriving' className={style.manMachineCoDriving}>
-                <BasicTitleDesc data={data}/>
+                <BasicTitleDesc data={manMachineCoDrivingData}/>
                 <br/>
                 <ul className={style.manMachineCoDrivingList}>
                     {manMachineCoDrivingList}
