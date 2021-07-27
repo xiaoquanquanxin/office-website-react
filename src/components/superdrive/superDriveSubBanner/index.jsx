@@ -37,15 +37,18 @@ const superDriveSubBannerData = [
 export const SuperDriveSubBanner = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(({}) => {
-
+)(({
+       superDriveSubBannerData
+   }) => {
+        if (!superDriveSubBannerData) {
+            return null;
+        }
         const superDriveSubBannerList = superDriveSubBannerData.map((item, index) => {
-
             return (
-                <li key={index} className={style.superDriveSubBannerItem}>
-                    <div className={style.superDriveSubBannerIcon}/>
+                <li key={index} className={style.superDriveSubBannerItem} style={{backgroundImage: `url(${item.img})`}}>
+                    {/*<div className={style.superDriveSubBannerIcon}/>*/}
                     <p className={style.superDriveSubBannerTitle}>{item.title}</p>
-                    <p className={style.superDriveSubBannerSpliter}/>
+                    {/*<p className={style.superDriveSubBannerSpliter}/>*/}
                     <p className={style.superDriveSubBannerDesc}>{item.desc}</p>
                 </li>
             )
