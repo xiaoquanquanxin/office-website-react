@@ -35,7 +35,6 @@ export const HigherLevelAutoDriving = connect(
         if (!higherLevelAutoDrivingData) {
             return null;
         }
-        console.log(higherLevelAutoDrivingData.img)
         return (
             <div id='higherLevelAutoDriving' className={style.higherLevelAutoDriving}>
                 <BasicTitleDesc data={data} isLight={true}/>
