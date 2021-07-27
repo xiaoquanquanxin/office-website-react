@@ -1,0 +1,55 @@
+.performanceIndex {
+    background: #18181B;
+    padding: 0 0.4rem;
+
+    .performanceIndexList {
+        width: 1080px;
+        margin: 57px auto 0;
+        color: white;
+        border-top: solid 1px rgba(151, 151, 151, 0.2);
+
+        .performanceIndexItem {
+            border-bottom: solid 1px rgba(151, 151, 151, 0.2);
+            line-height: 110px;
+            display: flex;
+            justify-content: space-around;
+
+            .content {
+                width: 50%;
+                text-indent: 75px;
+                font-size: 18px;
+            }
+        }
+
+        &.performanceIndexPcList {
+            display: block;
+        }
+
+        &.performanceIndexMobileList {
+            display: none;
+        }
+
+        @media screen and (max-width: 750px) {
+            width: 100%;
+
+
+            &.performanceIndexPcList {
+                display: none;
+            }
+
+            &.performanceIndexMobileList {
+                display: block;
+            }
+
+            .performanceIndexItem {
+                line-height: 1rem;
+
+                .content {
+                    width: 100%;
+                    text-indent: .42rem;
+                    font-size: .18rem;
+                }
+            }
+        }
+    }
+}
