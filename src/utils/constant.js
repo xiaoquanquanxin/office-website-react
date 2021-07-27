@@ -42,8 +42,8 @@ export const JOURNEY2 = {name: '征程2', type: 121};
 //  旭日3
 export const SUNRISE3 = {name: '旭日3', type: 122};
 
-//  omni    todo    缺一个用户案例接口参数type
-export const OMNI = {name: 'omni', type: -1};
+//  omni
+export const OMNI = {name: 'omni', type: 141};
 //  超级驾驶      todo    缺一个用户案例接口参数type
 export const SUPERDRIVE = {name: '超级驾驶', type: -1};
 //  征程5     todo    缺一个用户案例接口参数type
