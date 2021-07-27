@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {mapDispatchToProps, mapStateToProps} from "@store/reduxMap";
 import {BasicTitleDesc} from "@components/basicTitleDesc";
 import style from "./index.module.less";
+import {hasTitleAndImg} from "@utils/utils";
 
 //      数据1
 const topBlockData = [
@@ -66,14 +67,19 @@ const contentBlockData = {
 export const SuperDriveSystemArchitecture = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(({}) => {
-        const data = {title: '系统架构'};
+)(({
+       superDriveSystemArchitectureData
+   }) => {
+        //  如果没有数据，或者没有title，或者没有img
+        if (!hasTitleAndImg(superDriveSystemArchitectureData)) {
+            return null;
+        }
         return (
             <div id='superDriveSystemArchitecture' className={style.superDriveSystemArchitecture}>
-                <BasicTitleDesc data={data} isLight={true}/>
-                <div className={style.content}>
-                    <TopBlock topBlockData={topBlockData}/>
-                    <ContentBlock contentBlockData={contentBlockData}/>
+                <BasicTitleDesc data={superDriveSystemArchitectureData} isLight={true}/>
+                <div className={style.content} style={{backgroundImage: `url(${superDriveSystemArchitectureData.img})`}}>
+                    {/*<TopBlock topBlockData={topBlockData}/>*/}
+                    {/*<ContentBlock contentBlockData={contentBlockData}/>*/}
                 </div>
             </div>
         )

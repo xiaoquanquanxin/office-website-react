@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {mapDispatchToProps, mapStateToProps} from "@store/reduxMap";
 import {BasicTitleDesc} from "@components/basicTitleDesc";
 import style from "./index.module.less";
+import {hasTitleAndImg} from "@utils/utils";
 
 //  方案架构
 export const SolutionArchitecture = connect(
@@ -10,7 +11,7 @@ export const SolutionArchitecture = connect(
     mapDispatchToProps,
 )(({solutionArchitectureData}) => {
         //  如果没有数据，或者没有title，或者没有img
-        if (!solutionArchitectureData || !solutionArchitectureData.title || !solutionArchitectureData.img) {
+        if (!hasTitleAndImg(solutionArchitectureData)) {
             return null;
         }
         return (
