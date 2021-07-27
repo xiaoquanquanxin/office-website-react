@@ -8,13 +8,17 @@ import style from "./index.module.less";
 export const SolutionArchitecture = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(({}) => {
-        const data = {title: '方案架构'};
+)(({solutionArchitectureData}) => {
+        //  如果没有数据，或者没有title，或者没有img
+        if (!solutionArchitectureData || !solutionArchitectureData.title || !solutionArchitectureData.img) {
+            return null;
+        }
         return (
             <div id='solutionArchitecture' className={style.solutionArchitecture}>
-                <BasicTitleDesc data={data} isLight={true}/>
+                <BasicTitleDesc data={solutionArchitectureData} isLight={true}/>
                 <div className={style.content}>
-                    <div className={style.contentImg}/>
+                    <div className={style.contentImg}
+                         style={{backgroundImage: `url(${solutionArchitectureData.img || ''})`}}/>
                 </div>
             </div>
         )
