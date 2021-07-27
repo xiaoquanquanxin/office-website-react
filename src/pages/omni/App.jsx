@@ -17,7 +17,7 @@ import {
 import {BannerManage} from '@components/bannerManage';
 import {ScrollFixed} from '@components/scrollFixed';
 import {FixedBarBox} from '@components/fixedBarBox';
-import {ADAS, NAV_CAT_ID} from '@utils/constant';
+import {OMNI, NAV_CAT_ID} from '@utils/constant';
 import {CustomerCase} from '@components/CustomerCase';
 import {FourBlocks} from '@components/fourBlocks';
 import {JourneyAlgorithm} from '@components/adas/journeyAlgorithm';
@@ -38,10 +38,13 @@ export default connect(
             this.state = {
                 //  四个一块的
                 cdrbData: null,
-                //  征程2 视觉感知算法
+                //  车路协同路侧视觉感知算法
                 jAData: null,
                 //  客户案例
                 customerCaseData: null,
+
+                //  Horizon Omni 赋能更高级别自动驾驶
+                higherLevelAutoDrivingData: null,
             };
             //  页面宽度监听
             commonRelativeWideFn(this.props.setRelativeWideFn);
@@ -53,26 +56,26 @@ export default connect(
         }
 
         componentDidMount() {
-            //  ADAS
+            //  OMNI
             Promise.all([
                 //  获取页面文案接口
-                requestGetPageContent(ADAS.name)
+                requestGetPageContent(OMNI.name)
                     .then(data => {
                         setListJSONData(data[0]);
                         setListJSONData(data[1]);
                         this.setState((state) => {
                             return {
-                                //  征程2 视觉感知算法
+                                //  车路协同路侧视觉感知算法
                                 jAData: Object.assign({}, state.jAData, data[0]),
-                                //
-                                higherLevelAutoDrivingData: Object.assign({}, {}),
+                                //  Horizon Omni 赋能更高级别自动驾驶
+                                higherLevelAutoDrivingData: Object.assign({}, data[1]),
                                 //  客户案例
-                                customerCaseData: Object.assign({}, state.customerCaseData, data[4]),
+                                customerCaseData: Object.assign({}, state.customerCaseData, data[2]),
                             };
                         });
                     }),
                 //  获取图片标题接口
-                requestGetImgTitle(ADAS.name)
+                requestGetImgTitle(OMNI.name)
                     .then(data => {
                         //  四个一块的
                         const cdrbData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
@@ -85,7 +88,7 @@ export default connect(
 
                     }),
                 //  客户案例
-                requestGetClientCase(ADAS.type)
+                requestGetClientCase(OMNI.type)
                     .then(data => {
                         this.setState((state) => {
                             return {
@@ -122,9 +125,9 @@ export default connect(
                     {/*四个一块*/}
                     <div id="m1" pc={60} mobile={80}/>
                     <FourBlocks data={cdrbData} isLight={true}/>
-                    {/*征程2 视觉感知算法*/}
+                    {/*车路协同路侧视觉感知算法*/}
                     <JourneyAlgorithm jAData={jAData}/>
-                    {/*Horizon Omni c*/}
+                    {/*Horizon Omni 赋能更高级别自动驾驶*/}
                     <HigherLevelAutoDriving higherLevelAutoDrivingData={higherLevelAutoDrivingData}/>
                     <div id="m2" pc={60}/>
                     {/*客户案例*/}
