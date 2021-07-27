@@ -63,6 +63,7 @@ export default connect(
                     .then(data => {
                         setListJSONData(data[0]);
                         setListJSONData(data[1]);
+                        console.log(data[2])
                         this.setState((state) => {
                             return {
                                 //  车路协同路侧视觉感知算法
