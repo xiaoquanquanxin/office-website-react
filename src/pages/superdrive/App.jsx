@@ -50,7 +50,7 @@ export default connect(
             //  页面滚动监听
             getBrowserInfo(this.props.setBrowserScrollInfoFn);
             const {setBarBoxAnchorList} = props;
-            setBarBoxAnchorList(['概述', '参数']);
+            setBarBoxAnchorList(['概述', '架构']);
         }
 
         componentDidMount() {
@@ -110,20 +110,19 @@ export default connect(
                     <BasicHeader onceHeader={{isOnce: false}}/>
                     {/*合作咨询定位组件*/}
                     <ScrollFixed RenderElement={FixedBarBox}/>
+                    <div id="m1" pc={60} mobile={80}/>
                     {/*轮播*/}
                     {/*todo 发请求的id*/}
                     <BannerManage bannerType={13}/>
-                    <div id="m1" pc={60} mobile={80}/>
-
                     {/*超级驾驶二级banner*/}
                     <SuperDriveSubBanner superDriveSubBannerData={superDriveSubBannerData}/>
+                    <div id="m2" pc={60}/>
                     {/*方案架构*/}
                     <SolutionArchitecture solutionArchitectureData={solutionArchitectureData}/>
                     {/*系统架构*/}
                     <SuperDriveSystemArchitecture superDriveSystemArchitectureData={superDriveSystemArchitectureData}/>
                     {/*Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾*/}
                     <ManMachineCoDriving manMachineCoDrivingData={manMachineCoDrivingData}/>
-                    <div id="m2" pc={60}/>
 
                     {/*更多*/}
                     <GetMoreBox isGrey={true}/>
