@@ -71,9 +71,10 @@ export const SuperDriveSystemArchitecture = connect(
         return (
             <div id='superDriveSystemArchitecture' className={style.superDriveSystemArchitecture}>
                 <BasicTitleDesc data={data} isLight={true}/>
-                <br/>
-                <TopBlock topBlockData={topBlockData}/>
-                <ContentBlock contentBlockData={contentBlockData}/>
+                <div className={style.content}>
+                    <TopBlock topBlockData={topBlockData}/>
+                    <ContentBlock contentBlockData={contentBlockData}/>
+                </div>
             </div>
         )
     }
@@ -86,6 +87,9 @@ const TopBlock = ({topBlockData}) => {
             <div className={style.topBlockItem} key={index}>
                 <i>{topBlockItem.icon}</i>
                 <span className={style.topBlockItemText}>{topBlockItem.title}</span>
+                {
+                    (index === 0) && <span className={style.can}>CAN</span>
+                }
             </div>
         )
     })

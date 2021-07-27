@@ -1,233 +1,265 @@
 .superDriveSystemArchitecture {
     padding-top: 80px;
-    padding-bottom: 56px;
+    padding-bottom: 88px;
 
-
-    //  头部6个块
-    .topBlock {
-        width: 1012px;
-        height: 141px;
-        background: #F6F8FC;
-        border: 1px solid #D1DCFC;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border-radius: .4em;
-        padding: 0 .6em;
-        margin: 0 auto 4em;
-
-        //  每一个块
-        .topBlockItem {
-            width: 144px;
-            height: 53px;
-            line-height: 53px;
-            background: linear-gradient(90deg, #006BFF 0%, #009AFF 100%);
-            text-align: center;
-            position: relative;
-
-            .topBlockItemText {
-                width: 16px;
-                height: 16px;
-                color: var(--white);
-            }
-
-            &::after {
-                content: '';
-                display: block;
-                bottom: 2px;
-                margin-left: 50%;
-                width: 1px;
-                height: 100px;
-                background-color: #D1DCFC;
-            }
-        }
-    }
-
-    //  下面复杂的结构
-    .contentBlock {
-        margin: auto;
+    .content {
+        background: url(~@media/superdrive/superDriveSystemArchitecture/superDriveSystemArchitecture@2x.png) center/cover no-repeat;
         width: 1013px;
-        height: 428px;
-        padding: 20px;
-        background: #F6F8FC;
-        border: 1px solid #D1DCFC;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        text-align: center;
-
-        //  渐变
-        .linearGradient {
-            background: linear-gradient(90deg, #006BFF 0%, #009AFF 100%);
-            color: var(--white);
-        }
-
-        //  上部
-        .contentTop {
-            height: 53px;
-            display: flex;
-            justify-content: space-between;
-
-            .control {
-                width: 144px;
-            }
-
-            .title {
-                color: #0096FF;
-                width: 806px;
-                background: var(--white);
-                border: 1px solid #D1DCFC;
-            }
-        }
-
-        //  中部
-        .contentMiddle {
-            display: flex;
-            justify-content: space-between;
-
-            //  左侧
-            .contentLeft {
-                height: 248px;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-
-                .MCU1, .MCU2 {
-                    width: 144px;
-                    height: 115px;
-                }
-            }
-
-            //  右侧
-            .contentRight {
-                width: 806px;
-                display: flex;
-                justify-content: space-between;
-                //  右侧4个块
-                .contentBlockItem {
-                    width: 190px;
-                    height: 248px;
-                    border: 1px solid #D1DCFC;
-                    background: var(--white);
-
-                    .contentBlockItemTitle {
-                        font-size: 18px;
-                        color: #0096FF;
-                        padding-top: 2.2em;
-                        padding-bottom: 1em;
-                    }
-
-                    .contentBlockItemDesc {
-                        color: #595757;
-                    }
-                }
-            }
-        }
+        margin: 50px auto 0;
+        //  version01
+        height: 625px;
 
 
-        //  底部大蓝色
-        .contentBottom {
-            width: 100%;
-            height: 53px;
-        }
-
-
-        //  子元素垂直水平居中
-        .verticalHorizontalCenter {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-    }
-
-
-    @media screen and (max-width: 750px) {
-        padding-top: 1.06rem;
-        padding-bottom: .7rem;
         //  头部6个块
         .topBlock {
-            width: 5.94rem;
-            height: .83rem;
-            margin-bottom: .32rem;
+            width: 1012px;
+            height: 141px;
+            background: #F6F8FC;
+            border: 1px solid #D1DCFC;
+            //  version02
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: .4em;
+            padding: 0 .6em;
+            margin-bottom: 4em;
+            //  version01
+            display: none;
 
+
+            //  每一个块
             .topBlockItem {
-                width: .84rem;
-                height: .31rem;
-                line-height: .31rem;
-                font-size: .1rem;
+                width: 144px;
+                height: 53px;
+                line-height: 53px;
+                background: linear-gradient(90deg, #006BFF 0%, #009AFF 100%);
+                text-align: center;
+                position: relative;
+
+                .topBlockItemText {
+                    width: 16px;
+                    height: 16px;
+                    color: var(--white);
+                }
+
+                .can {
+                    position: absolute;
+                    bottom: -100px;
+                    color: #0096FF;
+                    font-weight: bold;
+                    margin-left: -10%;
+                }
 
                 &::after {
-                    bottom: .02rem;
-                    width: .01rem;
-                    height: .6rem;
+                    content: '';
+                    display: block;
+                    bottom: 2px;
+                    margin-left: 50%;
+                    width: 1px;
+                    height: 100px;
+                    background-color: #D1DCFC;
                 }
             }
         }
 
         //  下面复杂的结构
         .contentBlock {
-            width: 5.94rem;
-            height: 2.51rem;
-            padding: .12rem;
+            margin: auto;
+            width: 1013px;
+            height: 428px;
+            padding: 20px;
+            background: #F6F8FC;
+            border: 1px solid #D1DCFC;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            text-align: center;
+            //  version01
+            display: none;
+
+
+            //  渐变
+            .linearGradient {
+                background: linear-gradient(90deg, #006BFF 0%, #009AFF 100%);
+                color: var(--white);
+            }
+
             //  上部
             .contentTop {
-                height: .31rem;
-                line-height: .31rem;
-                font-size: .09rem;
+                height: 53px;
+                display: flex;
+                justify-content: space-between;
 
                 .control {
-                    width: .84rem;
-                    font-size: .09rem;
+                    width: 144px;
                 }
 
                 .title {
-                    width: 4.73rem;
+                    color: #0096FF;
+                    width: 806px;
+                    background: var(--white);
+                    border: 1px solid #D1DCFC;
                 }
             }
 
             //  中部
             .contentMiddle {
+                display: flex;
+                justify-content: space-between;
+
                 //  左侧
                 .contentLeft {
-                    height: 1.45rem;
+                    height: 248px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
 
                     .MCU1, .MCU2 {
-                        width: .84rem;
-                        height: .67rem;
-                        font-size: .09rem;
+                        width: 144px;
+                        height: 115px;
                     }
                 }
 
                 //  右侧
                 .contentRight {
-                    width: 4.73rem;
-
+                    width: 806px;
+                    display: flex;
+                    justify-content: space-between;
                     //  右侧4个块
                     .contentBlockItem {
-                        width: 1.11rem;
-                        height: 1.45rem;
-
+                        width: 190px;
+                        height: 248px;
+                        border: 1px solid #D1DCFC;
+                        background: var(--white);
 
                         .contentBlockItemTitle {
-                            font-size: .1rem;
+                            font-size: 18px;
+                            color: #0096FF;
                             padding-top: 2.2em;
                             padding-bottom: 1em;
                         }
 
                         .contentBlockItemDesc {
-                            font-size: .09rem;
+                            color: #595757;
                         }
                     }
                 }
-
             }
 
 
             //  底部大蓝色
             .contentBottom {
-                height: .31rem;
-                font-size: .1rem;
+                width: 100%;
+                height: 53px;
+            }
+
+
+            //  子元素垂直水平居中
+            .verticalHorizontalCenter {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+    }
+
+
+    @media screen and (max-width: 750px) {
+        padding-top: 0;
+        padding-bottom: .5rem;
+        .content {
+            width: 5.94rem;
+            height: 3.66rem;
+            margin-top: .27rem;
+            background: url(~@media/superdrive/superDriveSystemArchitecture/superDriveSystemArchitecture.png) center/cover no-repeat;
+
+            //  头部6个块
+            .topBlock {
+                display: none;
+                //width: 5.94rem;
+                //height: .83rem;
+                //margin-bottom: .32rem;
+                //
+                //.topBlockItem {
+                //    width: .84rem;
+                //    height: .31rem;
+                //    line-height: .31rem;
+                //    font-size: .1rem;
+                //
+                //    &::after {
+                //        bottom: .02rem;
+                //        width: .01rem;
+                //        height: .6rem;
+                //    }
+                //}
+            }
+
+            //  下面复杂的结构
+            .contentBlock {
+                display: none;
+                //width: 5.94rem;
+                //height: 2.51rem;
+                //padding: .12rem;
+                ////  上部
+                //.contentTop {
+                //    height: .31rem;
+                //    line-height: .31rem;
+                //    font-size: .09rem;
+                //
+                //    .control {
+                //        width: .84rem;
+                //        font-size: .09rem;
+                //    }
+                //
+                //    .title {
+                //        width: 4.73rem;
+                //    }
+                //}
+                //
+                ////  中部
+                //.contentMiddle {
+                //    //  左侧
+                //    .contentLeft {
+                //        height: 1.45rem;
+                //
+                //        .MCU1, .MCU2 {
+                //            width: .84rem;
+                //            height: .67rem;
+                //            font-size: .09rem;
+                //        }
+                //    }
+                //
+                //    //  右侧
+                //    .contentRight {
+                //        width: 4.73rem;
+                //
+                //        //  右侧4个块
+                //        .contentBlockItem {
+                //            width: 1.11rem;
+                //            height: 1.45rem;
+                //
+                //
+                //            .contentBlockItemTitle {
+                //                font-size: .1rem;
+                //                padding-top: 2.2em;
+                //                padding-bottom: 1em;
+                //            }
+                //
+                //            .contentBlockItemDesc {
+                //                font-size: .09rem;
+                //            }
+                //        }
+                //    }
+                //
+                //}
+                //
+                //
+                ////  底部大蓝色
+                //.contentBottom {
+                //    height: .31rem;
+                //    font-size: .1rem;
+                //}
             }
         }
     }
