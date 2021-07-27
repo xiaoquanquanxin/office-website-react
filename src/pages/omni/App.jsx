@@ -51,8 +51,7 @@ export default connect(
             //  页面滚动监听
             getBrowserInfo(this.props.setBrowserScrollInfoFn);
             const {setBarBoxAnchorList} = props;
-            //  2021-07-25
-            setBarBoxAnchorList(['', '']);
+            setBarBoxAnchorList(['概述', '客户案例']);
         }
 
         componentDidMount() {
@@ -120,11 +119,11 @@ export default connect(
                     <BasicHeader onceHeader={{isOnce: false}}/>
                     {/*合作咨询定位组件*/}
                     <ScrollFixed RenderElement={FixedBarBox}/>
+                    <div id="m1" pc={60} mobile={80}/>
                     {/*轮播*/}
                     {/*todo 发请求的id*/}
                     <BannerManage bannerType={13}/>
                     {/*四个一块*/}
-                    <div id="m1" pc={60} mobile={80}/>
                     <FourBlocks data={cdrbData} isLight={true}/>
                     {/*车路协同路侧视觉感知算法*/}
                     <JourneyAlgorithm jAData={jAData}/>
