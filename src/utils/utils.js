@@ -1,6 +1,6 @@
 //  倒计时
-import { resizeListener, scrollListener } from '@utils/eventListener';
-import { BASIC_COMPARE_WIDTH } from '@utils/constant';
+import {resizeListener, scrollListener} from '@utils/eventListener';
+import {BASIC_COMPARE_WIDTH} from '@utils/constant';
 
 export function timeSurplus(countDown) {
     const surplus = new Date(countDown).getTime() + 15 * 60 * 1000 - new Date().getTime();
@@ -21,7 +21,8 @@ function fillUpWithZero(n) {
 }
 
 //  空函数
-export function emptyFunction() { }
+export function emptyFunction() {
+}
 
 //  header排序，按rank排序
 /**
@@ -165,10 +166,10 @@ export const getContentList = (data, listType) => {
         if (titleKey && contentKey) {
             switch (listType) {
                 case 1: //  footer
-                    list.push({ name: `${titleKey}：${contentKey}`, id: -1000000 + index });
+                    list.push({name: `${titleKey}：${contentKey}`, id: -1000000 + index});
                     break;
                 case 2: //  关于我们
-                    list.push({ title: titleKey, content: contentKey, id: -1000000 + index });
+                    list.push({title: titleKey, content: contentKey, id: -1000000 + index});
                     break;
                 default:
                     throw new Error(`listType ${listType} 未定义`);
@@ -237,3 +238,9 @@ const browser = {
 };
 //  是移动端
 export const isMobile = (browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad);
+
+
+//  判断是否有title和img，omni页面Horizon Omni 赋能更高级别自动驾驶、superdrive方案架构、superdrive系统架构
+export const hasTitleAndImg = (data) => {
+    return data && data.title && data.img;
+}
