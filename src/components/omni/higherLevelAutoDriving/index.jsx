@@ -34,7 +34,7 @@ export const HigherLevelAutoDriving = connect(
    }) => {
         //  如果没有数据，或者没有title，或者没有img
         if (!hasTitleAndImg(higherLevelAutoDrivingData)) {
-            return
+            return null;
         }
         return (
             <div id='higherLevelAutoDriving' className={style.higherLevelAutoDriving}>
