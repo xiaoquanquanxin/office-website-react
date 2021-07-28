@@ -244,3 +244,10 @@ export const isMobile = (browser.versions.mobile || browser.versions.ios || brow
 export const hasTitleAndImg = (data) => {
     return data && data.title && data.img;
 }
+
+
+//  替换\r\r
+export const replaceRN = (str = '') => {
+    return str.replace(/(\r)/ig, '\n')
+        .replace(/\n\n/ig, '<br/>');
+}
