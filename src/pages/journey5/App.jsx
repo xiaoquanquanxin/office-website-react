@@ -7,17 +7,14 @@ import {clipData, commonRelativeWideFn, getBrowserInfo} from '@utils/utils';
 import {FixedBarBox} from '@components/fixedBarBox';
 import {ScrollFixed} from '@components/scrollFixed';
 import {BannerOnce} from '@components/bannerOnce';
-// import { BannerManage } from '@components/bannerManage';
 import {FourBlocks} from '@components/fourBlocks';
-import {BaseParam} from '@components/journey2/baseParam';
 import {GetMoreBox} from '@components/getMoreBox';
 import {PopForm} from '@components/popForm';
 import {Toast} from '@components/toast';
-import {JOURNEY3, NAV_CAT_ID} from '@utils/constant';
-import {requestGetClientCase, requestGetImgTitle, requestGetPageContent} from '@api/index';
+import {JOURNEY5, NAV_CAT_ID} from '@utils/constant';
+import {requestGetImgTitle, requestGetPageContent} from '@api/index';
 import {OpenExplorer} from '@components/sunrise3/openExplorer';
 import {UltraLowPower} from '@components/journey3/ultraLowPower';
-import {ApplyScene} from '@components/applyScene';
 import './index.less';
 import {BlackPadding} from '@components/blackPadding';
 import {PerformanceIndex} from "@components/journey5/performanceIndex";
@@ -58,13 +55,24 @@ export default connect(
         componentDidMount() {
             Promise.all([
                 //  获取页面文案接口
-                requestGetPageContent(JOURNEY3.name)
+                requestGetPageContent(JOURNEY5.name)
                     .then(data => {
-                        this.setState((state) => {
-                            if (data[5].content) {
-                                const _data = JSON.parse(data[5].content);
-                                Object.assign(data[5], _data);
+                        if (data[5] && data[5].content) {
+                            data[5].content = JSON.parse(data[5].content);
+                            const {content} = data[5];
+                            //  移动端数据结构
+                            data[5].mobileList = content;
+                            //  pc端数据结构
+                            const pcList = [];
+                            for (let i = 0; i < content.length; i += 2) {
+                                const pcItem = [];
+                                pcItem.push(content[i])
+                                pcItem.push(content[i + 1]);
+                                pcList.push(pcItem);
                             }
+                            data[5].pcList = pcList;
+                        }
+                        this.setState((state) => {
                             return {
                                 //  超低功耗
                                 ultraLowPowerData1: Object.assign({}, state.ultraLowPowerData1, data[0]),
@@ -72,15 +80,16 @@ export default connect(
                                 ultraLowPowerData3: Object.assign({}, state.ultraLowPowerData1, data[2]),
                                 ultraLowPowerData4: Object.assign({}, state.ultraLowPowerData1, data[3]),
                                 //  征程  5芯片架构
-                                openExplorerData: Object.assign({}, state.openExplorerData, data[6]),
-                                //  todo
+                                openExplorerData: Object.assign({}, state.openExplorerData, data[4]),
+                                //  性能指标
+                                performanceIndexData: Object.assign({}, state.performanceIndexData, data[5]),
                                 //  征程  5 (6391 FPS)
                                 JourneyFPSData: Object.assign({}, state.openExplorerData, data[6]),
                             };
                         });
                     }),
                 //  获取图片标题接口
-                requestGetImgTitle(JOURNEY3.name)
+                requestGetImgTitle(JOURNEY5.name)
                     .then(data => {
                         //  四个一块的
                         const cdrbData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
@@ -123,7 +132,7 @@ export default connect(
                     {/*<FixedBarBox/>*/}
                     <div id="m1" pc={60}/>
                     {/*banner轮播*/}
-                    <BannerOnce bannerType={21}/>
+                    <BannerOnce bannerType={24}/>
                     <BlackPadding y={3} color={'#131313'}/>
                     {/*四个一块*/}
                     <FourBlocks data={cdrbData}/>
