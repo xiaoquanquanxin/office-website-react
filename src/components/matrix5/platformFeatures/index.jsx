@@ -15,7 +15,6 @@ export const PlatformFeatures = connect(
         return null;
     }
     const platformFeaturesList = (platformFeaturesData.list || []).map((item, index) => {
-        console.log(item)
         return (
             <div className={style.platformFeaturesItem}>
                 <img className={style.platformFeaturesImg} src={item.img} alt=""/>
