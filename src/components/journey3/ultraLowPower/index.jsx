@@ -10,7 +10,8 @@ export const UltraLowPower = connect(
 )(
     class extends React.Component {
         render() {
-            let { ultraLowPowerData, contentIsRight, REDUCER_BROWSER_INFO } = this.props
+            //  position 是 定位参数，不影响移动端
+            let {ultraLowPowerData, contentIsRight, REDUCER_BROWSER_INFO, position} = this.props
             ultraLowPowerData = ultraLowPowerData || {};
             let rightDescMore = contentIsRight && ultraLowPowerData.desc && ultraLowPowerData.desc.length > 100;
             return (
@@ -28,6 +29,7 @@ export const UltraLowPower = connect(
                         }
                         <div
                             className={`${style.contentWrap} ${contentIsRight ? style.contentIsRight : ''} ${rightDescMore ? style.rightDescMore : ''}`}
+                            style={position ? {left: position.left} : null}
                         >
                             <p className={style.title} dangerouslySetInnerHTML={{ __html: ultraLowPowerData.title }} />
                             <ul className={style.list}>
