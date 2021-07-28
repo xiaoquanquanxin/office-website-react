@@ -1,0 +1,68 @@
+.platformFeatures {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    background: #1A1A1A;
+
+
+    .platformFeaturesList {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        width: 1280px;
+        margin: auto;
+
+        .platformFeaturesItem {
+            flex: 0 0 33.33%;
+            color: var(--white);
+            padding: 60px 59px 0;
+
+            .platformFeaturesImg {
+                display: block;
+                width: 47px;
+                margin: auto;
+            }
+
+            .platformFeaturesTitle {
+                padding-top: 23px;
+                padding-bottom: 2px;
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .platformFeaturesDesc {
+                font-size: 14px;
+                line-height: 26px;
+                word-break: break-all;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 750px) {
+        padding-top: .4rem;
+        padding-bottom: .5rem;
+        .platformFeaturesList {
+            width: 7.5rem;
+
+            .platformFeaturesItem {
+                flex: 0 0 50%;
+                padding: .35rem .35rem 0;
+
+                .platformFeaturesImg {
+                    width: .42rem;
+                }
+
+                .platformFeaturesTitle {
+                    padding-top: .15rem;
+                    padding-bottom: .03rem;
+                    font-size: .15rem;
+                }
+
+                .platformFeaturesDesc {
+                    font-size: .12rem;
+                    line-height: .2rem;
+                }
+            }
+        }
+    }
+}
