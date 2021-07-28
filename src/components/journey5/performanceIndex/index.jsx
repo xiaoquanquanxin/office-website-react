@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './index.module.less';
 import {BasicTitleDesc} from "@components/basicTitleDesc";
+import {connect} from "react-redux";
+import {mapDispatchToProps, mapStateToProps} from "@store/reduxMap";
 
-//  todo    这里，渲染2套，如果是pc，展示符合list，如果是Mobile，展示单一list
 //  数据
 const performanceIndexData = {
-    title: '性能指标',
     pcList: [
         [
             '双核BPU   贝叶斯架构',
@@ -35,12 +35,14 @@ const performanceIndexData = {
 }
 
 //  性能指标
-export const PerformanceIndex = ({
-                                     // performanceIndexData,
-                                 }) => {
+export const PerformanceIndex = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(({performanceIndexData}) => {
     if (!performanceIndexData) {
         return null;
     }
+    //  这里，渲染2套，如果是pc，展示符合list，如果是Mobile，展示单一list
     const pcList = (performanceIndexData.pcList || []).map((item, index) => {
         return (
             <li key={index} className={style.performanceIndexItem}>
@@ -64,4 +66,4 @@ export const PerformanceIndex = ({
             <br/>
         </div>
     );
-};
+});
