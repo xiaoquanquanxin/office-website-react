@@ -121,8 +121,7 @@ export default connect(
                     <ScrollFixed RenderElement={FixedBarBox}/>
                     <div id="m1" pc={60} mobile={80}/>
                     {/*轮播*/}
-                    {/*todo 发请求的id*/}
-                    <BannerManage bannerType={13}/>
+                    <BannerManage bannerType={22}/>
                     {/*四个一块*/}
                     <FourBlocks data={cdrbData} isLight={true}/>
                     {/*车路协同路侧视觉感知算法*/}
