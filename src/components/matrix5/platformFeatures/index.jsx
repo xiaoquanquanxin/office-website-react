@@ -16,7 +16,7 @@ export const PlatformFeatures = connect(
     }
     const platformFeaturesList = (platformFeaturesData.list || []).map((item, index) => {
         return (
-            <div className={style.platformFeaturesItem}>
+            <div className={style.platformFeaturesItem} key={index}>
                 <img className={style.platformFeaturesImg} src={item.img} alt=""/>
                 <div className={style.platformFeaturesTitle} dangerouslySetInnerHTML={{__html: item.title}}/>
                 <div className={style.platformFeaturesDesc} dangerouslySetInnerHTML={{__html: item.desc}}/>
