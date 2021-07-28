@@ -141,7 +141,7 @@ export const BannerOnce = connect(
                 // case 4: //  核心技术、天工开物、高级别辅助驾驶、自动驾驶、智能座舱、高精地图、智能物联网
                 //     SliderItem = ProjectBannerSliderItem;
                 //     break;
-                case 5: //  征程、旭日2、旭日3
+                case 5: //  征程2、征程3、旭日2、旭日3、征程5
                     SliderItem = ProductSliderItem;
                     break;
                 case 6: //  matrix
