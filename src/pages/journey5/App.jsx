@@ -145,21 +145,13 @@ export default connect(
                     <UltraLowPower ultraLowPowerData={ultraLowPowerData3}/>
                     <BlackPadding color={'#171717'} zIndex={-1}/>
                     <UltraLowPower ultraLowPowerData={ultraLowPowerData4} contentIsRight={true}/>
-
                     {/*征程  5芯片架构*/}
                     <OpenExplorer openExplorerData={openExplorerData} isLight={false}/>
-
+                    <div id="m2" pc={36}/>
                     {/*性能指标*/}
                     <PerformanceIndex performanceIndexData={performanceIndexData}/>
-
-
                     {/*征程  5 (6391 FPS)*/}
                     <JourneyFPS JourneyFPSData={JourneyFPSData}/>
-
-                    {/*规格参数*/}
-                    <div id="m2" pc={36}/>
-
-
                     {/*更多*/}
                     <GetMoreBox/>
                     {/*表单*/}
