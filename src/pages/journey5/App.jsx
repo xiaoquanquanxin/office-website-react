@@ -138,13 +138,17 @@ export default connect(
                     <FourBlocks data={cdrbData}/>
                     <BlackPadding color={'#101010'}/>
                     {/*超低功耗*/}
-                    <UltraLowPower ultraLowPowerData={ultraLowPowerData1}/>
+                    <UltraLowPower ultraLowPowerData={ultraLowPowerData1}
+                                   position={{left: '0px',}}/>
                     <BlackPadding color={'#171717'} zIndex={-1}/>
-                    <UltraLowPower ultraLowPowerData={ultraLowPowerData2} contentIsRight={true}/>
+                    <UltraLowPower ultraLowPowerData={ultraLowPowerData2} contentIsRight={true}
+                                   position={{left: '725px',}}/>
                     <BlackPadding color={'#171717'} zIndex={-1}/>
-                    <UltraLowPower ultraLowPowerData={ultraLowPowerData3}/>
+                    <UltraLowPower ultraLowPowerData={ultraLowPowerData3}
+                                   position={{left: '0px',}}/>
                     <BlackPadding color={'#171717'} zIndex={-1}/>
-                    <UltraLowPower ultraLowPowerData={ultraLowPowerData4} contentIsRight={true}/>
+                    <UltraLowPower ultraLowPowerData={ultraLowPowerData4} contentIsRight={true}
+                                   position={{left: '600px',}}/>
                     {/*征程  5芯片架构*/}
                     <OpenExplorer openExplorerData={openExplorerData} isLight={false}/>
                     <div id="m2" pc={36}/>
