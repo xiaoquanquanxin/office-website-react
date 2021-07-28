@@ -5,7 +5,7 @@ module.exports = {
 
     //  接口是以 '/api' 为开头的
     RegApi: /^\/api/,
-    apiTargetUrl: 'http://horizon.wx.h5work.com',
+    apiTargetUrl: 'https://horizon.ai',
 
     //  接口是以 '/upload' 为开头的
     RegUpload: /^\/upload/,
