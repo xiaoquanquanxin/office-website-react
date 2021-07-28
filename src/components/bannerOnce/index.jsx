@@ -147,7 +147,7 @@ export const BannerOnce = connect(
                 case 5: //  征程2、征程3、旭日2、旭日3、征程5
                     SliderItem = ProductSliderItem;
                     break;
-                case 6: //  matrix
+                case 6: //  matrix、matrix5
                     SliderItem = MatrixSliderItem;
                     break;
                 default:
