@@ -49,6 +49,9 @@ export const SUPERDRIVE = {name: 'superdrive', };
 //  征程5      没有客户案例
 export const JOURNEY5 = {name: '征程5',};
 
+//  matrix
+export const MATRIX5 = {name: 'Matrix5', type: 119};
+
 //  页面pathName
 export const pathNameList = [
     '',
@@ -72,4 +75,5 @@ export const pathNameList = [
     'omni.html',
     'superdrive.html',
     'journey5.html',
+    'matrix5.html'
 ];
