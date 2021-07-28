@@ -151,7 +151,7 @@ export default connect(
                                    position={{left: '600px',}}/>
                     {/*征程  5芯片架构*/}
                     <OpenExplorer openExplorerData={openExplorerData} isLight={false}/>
-                    <div id="m2" pc={36}/>
+                    <div id="m2" pc={70} mobile={100}/>
                     {/*性能指标*/}
                     <PerformanceIndex performanceIndexData={performanceIndexData}/>
                     {/*征程  5 (6391 FPS)*/}
