@@ -4,7 +4,6 @@ import {BasicFooter} from '@components/basicFooter';
 import {connect} from 'react-redux';
 import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
 import {
-    requestGetClientCase,
     requestGetImgTitle,
     requestGetPageContent
 } from '@api';
@@ -12,7 +11,6 @@ import {
     clipData,
     commonRelativeWideFn,
     getBrowserInfo,
-    setListJSONData
 } from '@utils/utils';
 import {BannerManage} from '@components/bannerManage';
 import {ScrollFixed} from '@components/scrollFixed';

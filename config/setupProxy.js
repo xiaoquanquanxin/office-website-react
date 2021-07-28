@@ -4,7 +4,7 @@ module.exports = function (app){
     app.use(
         //  常规换源，api换空字符串
         createProxyMiddleware('/api', {
-            target: 'https://horizon.ai',
+            target: 'http://horizon.wx.h5work.com/',
             changeOrigin: true,
             pathRewrite: {
                 '^/api': ''
@@ -12,7 +12,7 @@ module.exports = function (app){
         }),
         //  图片资源
         createProxyMiddleware('/upload', {
-            target: 'https://horizon.ai',
+            target: 'http://horizon.wx.h5work.com/',
             changeOrigin: true,
         })
     );

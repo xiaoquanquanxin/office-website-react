@@ -50,27 +50,27 @@ export const HigherLevelAutoDriving = connect(
         );
     },
 );
-//  赋能更高级别自动驾驶 的每一行
-const ContentList = ({content, index}) => {
-    return (
-        <li className={`${style.contentRows} ${!(index % 2) && style.spaceAround}`}>
-            <ContentCol content={content[0]} directionRight={false}/>
-            <ContentCol content={content[1]} directionRight={true}/>
-        </li>
-    );
-};
-
-//  赋能更高级别自动驾驶 的每一项
-const ContentCol = ({content = {}, directionRight}) => {
-    const {title = '', desc = ''} = content;
-    return (
-        <div className={`${style.contentCol} ${directionRight && style.directionRight}`}>
-            <div className={style.contentColImg}/>
-            <div className={style.contentAround}/>
-            <div className={style.contentText}>
-                <div className={style.contentTitle} dangerouslySetInnerHTML={{__html: title}}/>
-                <div className={style.contentDesc} dangerouslySetInnerHTML={{__html: desc}}/>
-            </div>
-        </div>
-    );
-};
+// //  赋能更高级别自动驾驶 的每一行
+// const ContentList = ({content, index}) => {
+//     return (
+//         <li className={`${style.contentRows} ${!(index % 2) && style.spaceAround}`}>
+//             <ContentCol content={content[0]} directionRight={false}/>
+//             <ContentCol content={content[1]} directionRight={true}/>
+//         </li>
+//     );
+// };
+//
+// //  赋能更高级别自动驾驶 的每一项
+// const ContentCol = ({content = {}, directionRight}) => {
+//     const {title = '', desc = ''} = content;
+//     return (
+//         <div className={`${style.contentCol} ${directionRight && style.directionRight}`}>
+//             <div className={style.contentColImg}/>
+//             <div className={style.contentAround}/>
+//             <div className={style.contentText}>
+//                 <div className={style.contentTitle} dangerouslySetInnerHTML={{__html: title}}/>
+//                 <div className={style.contentDesc} dangerouslySetInnerHTML={{__html: desc}}/>
+//             </div>
+//         </div>
+//     );
+// };
