@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {mapDispatchToProps, mapStateToProps} from "@store/reduxMap";
 import {BasicTitleDesc} from "@components/basicTitleDesc";
 import style from "./index.module.less";
+import {replaceRN} from "@utils/utils";
 
 //  数据
 const manMachineCoDrivingData = [
@@ -69,11 +70,7 @@ export const ManMachineCoDriving = connect(
         }
         const manMachineCoDrivingList = (manMachineCoDrivingData.list || []).map(((item, index) => {
             //  替换\r\n
-            if (item.desc) {
-                item._desc = item.desc
-                    .replace(/(\r)/ig, '\n')
-                    .replace(/\n\n/ig, '<br/>');
-            }
+            item._desc = replaceRN(item.desc);
             return (
                 <li key={index} className={style.manMachineCoDrivingItem}>
                     <div className={style.manMachineCoDrivingImg}/>
