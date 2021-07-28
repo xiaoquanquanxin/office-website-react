@@ -10,6 +10,7 @@ export const MatrixSliderItem = connect(
 )(({
     data,
     REDUCER_BROWSER_INFO,
+    bannerType,
 }) => {
     const { isRelativeWide } = REDUCER_BROWSER_INFO;
     data._video = data.video;
@@ -17,8 +18,15 @@ export const MatrixSliderItem = connect(
     if (!isValidHTTPString(data.video)) {
         data._video = null;
     }
+    console.log(bannerType);
+    const classNameTypeMap = {
+        //  matrix2
+        11:'whiteBannerOnce',
+        //  matrix5
+        25:'whiteBannerMatrix5',
+    }
     return (
-        <div className={`${style.bannerOnce} whiteBannerOnce`}>
+        <div className={`${style.bannerOnce} ${classNameTypeMap[bannerType]}`}>
             <div className={`${style.bannerSlider}`}>
                 {
                     (data._video && isRelativeWide)

@@ -130,6 +130,7 @@ export const BannerOnce = connect(
 
         render() {
             const { sliderItemType, swiperData } = this.state;
+            const { bannerType } = this.props;
             let SliderItem = null;
             switch (sliderItemType) {
                 // case 1: //  首页banner
@@ -153,7 +154,7 @@ export const BannerOnce = connect(
                 default:
                     throw new Error('错误的类型，没有这种类sliderItem');
             }
-            return swiperData && swiperData.length ? <SliderItem data={swiperData[0]} /> : null
+            return swiperData && swiperData.length ? <SliderItem data={swiperData[0]} bannerType={bannerType}/> : null
         }
     }
 );
