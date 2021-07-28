@@ -25,7 +25,7 @@ export const PlatformFeatures = connect(
     });
     return (
         <div className={style.platformFeatures}>
-            <BasicTitleDesc data={platformFeaturesData} widthType={620}/>
+            <BasicTitleDesc data={platformFeaturesData}/>
             <div className={style.platformFeaturesList}>
                 {platformFeaturesList}
             </div>
