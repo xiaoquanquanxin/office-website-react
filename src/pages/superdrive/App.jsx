@@ -112,8 +112,7 @@ export default connect(
                     <ScrollFixed RenderElement={FixedBarBox}/>
                     <div id="m1" pc={60} mobile={80}/>
                     {/*轮播*/}
-                    {/*todo 发请求的id*/}
-                    <BannerManage bannerType={13}/>
+                    <BannerManage bannerType={23}/>
                     {/*超级驾驶二级banner*/}
                     <SuperDriveSubBanner superDriveSubBannerData={superDriveSubBannerData}/>
                     <div id="m2" pc={60}/>
