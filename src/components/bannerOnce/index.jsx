@@ -43,8 +43,9 @@ export const BannerOnce = connect(
             9: 5,
             10: 5,
             24: 5,
-            //  matrix
+            //  matrix、matrix5
             11: 6,
+            25: 6,
         };
         //  功能类似，banner的Id
         //  key: bannerType , value : bannerId
@@ -66,8 +67,9 @@ export const BannerOnce = connect(
             10: productBanner,
             21: productBanner,
             24: productBanner,
-            //  matrix
+            //  matrix、matrix5
             11: matrixBanner,
+            25: matrixBanner,
         };
         //  banner的样式
         bannerStyle = {
@@ -85,8 +87,9 @@ export const BannerOnce = connect(
             10: 'pb10',
             21: 'pb21',
             24: 'pb21',
-            // matrix
+            // matrix、matrix5
             11: 'pb11',
+            25: 'pb11',
 
             18: 'pb18',
         };
