@@ -37,11 +37,12 @@ export const BannerOnce = connect(
             16: 4,
             17: 4,
             18: 4,
-            //  征程2、征程3、旭日2、旭日3
+            //  征程2、征程3、旭日2、旭日3、征程5
             8: 5,
             21: 5,
             9: 5,
             10: 5,
+            24: 5,
             //  matrix
             11: 6,
         };
@@ -59,11 +60,12 @@ export const BannerOnce = connect(
             16: projectBanner,
             17: projectBanner,
             18: projectBanner,
-            //  征程2、征程3、旭日2、旭日3
+            //  征程2、征程3、旭日2、旭日3、征程5
             8: productBanner,
             9: productBanner,
             10: productBanner,
             21: productBanner,
+            24: productBanner,
             //  matrix
             11: matrixBanner,
         };
@@ -77,11 +79,12 @@ export const BannerOnce = connect(
             16: 'pb16',
             17: 'pb17',
 
-            //  征程2、征程3、旭日2、旭日3
+            //  征程2、征程3、旭日2、旭日3、征程5
             8: 'pb8',
             9: 'pb9',
             10: 'pb10',
             21: 'pb21',
+            24: 'pb21',
             // matrix
             11: 'pb11',
 
