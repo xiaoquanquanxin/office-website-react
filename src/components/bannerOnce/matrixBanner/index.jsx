@@ -18,7 +18,7 @@ export const MatrixSliderItem = connect(
     if (!isValidHTTPString(data.video)) {
         data._video = null;
     }
-    console.log(bannerType);
+    //  console.log(bannerType);
     const classNameTypeMap = {
         //  matrix2
         11:'whiteBannerOnce',
