@@ -25,7 +25,7 @@ export const BannerManage = connect(
             //  关于我们、新闻中心
             4: 3,
             5: 3,
-            //  核心技术、天工开物、高级别辅助驾驶、自动驾驶、智能座舱、高精地图、智能物联网
+            //  核心技术、天工开物、高级别辅助驾驶、自动驾驶、智能座舱、高精地图、智能物联网、omni
             6: 4,
             12: 4,
             13: 4,
@@ -33,6 +33,7 @@ export const BannerManage = connect(
             16: 4,
             17: 4,
             18: 4,
+            22: 4,
             //  征程2、征程3、旭日2、旭日3
             8: 5,
             21: 5,
@@ -47,7 +48,7 @@ export const BannerManage = connect(
             //  关于我们、新闻中心
             4: aboutBanner,
             5: aboutBanner,
-            //  核心技术、天工开物、高级别辅助驾驶、自动驾驶、智能座舱、高精地图、智能物联网
+            //  核心技术、天工开物、高级别辅助驾驶、自动驾驶、智能座舱、高精地图、智能物联网、omni
             6: projectBanner,
             12: projectBanner,
             13: projectBanner,
@@ -55,6 +56,7 @@ export const BannerManage = connect(
             16: projectBanner,
             17: projectBanner,
             18: projectBanner,
+            22: projectBanner,
             //  征程2、征程3、旭日2、旭日3
             8: productBanner,
             21: productBanner,
@@ -80,7 +82,9 @@ export const BannerManage = connect(
             11: 'pb11',
             21: 'pb21',
 
+            //  aiot、omni
             18: 'pb18',
+            22: 'pb18',
         };
 
         /**
