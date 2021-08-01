@@ -6,6 +6,7 @@ import { setPopFormOpenStatus, setToastStatus } from '@store/popForm';
 import { originBarBoxAnchorList, setBarBoxAnchorList, setBarBoxData } from '@store/fixedTabBox';
 import { setNavListData } from '@store/header';
 import { setProjectBanner } from '@store/banner';
+import { setDevelopmentProcessData, setSupportScenarioActiveData } from '@store/designIn';
 
 //  指定如何把当前 Redux store state 映射到展示组件的 props 中
 //  ✅读取state到props
@@ -26,6 +27,8 @@ export const mapStateToProps = ({
     REDUCER_HEADER_DATA,
     //  banner样式
     REDUCER_BANNER_INFO,
+    //  车辆生态
+    REDUCER_DESIGN_IN,
 }) => {
     return {
         REDUCER_BROWSER_INFO,
@@ -35,7 +38,8 @@ export const mapStateToProps = ({
         REDUCER_POP_FORM,
         REDUCER_FIXED_TAB_BOX,
         REDUCER_HEADER_DATA,
-        REDUCER_BANNER_INFO
+        REDUCER_BANNER_INFO,
+        REDUCER_DESIGN_IN,
     };
 };
 
@@ -123,7 +127,16 @@ export const mapDispatchToProps = (dispatch) => {
         //  设置产品banner信息
         setProjectBanner: (projectBannerStyle) => {
             dispatch(setProjectBanner(projectBannerStyle));
-        }
+        },
+
+        //  点击车辆生态-支持场景的左侧菜单
+        setSupportScenarioActiveData: (supportScenarioData) => {
+            dispatch(setSupportScenarioActiveData(supportScenarioData));
+        },
+        //  点击车辆生态-开发流程
+        setDevelopmentProcessData: (developmentProcessData) => {
+            dispatch(setDevelopmentProcessData(developmentProcessData));
+        },
     };
 };
 
