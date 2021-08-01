@@ -1,0 +1,59 @@
+.successfulCases {
+	background: #1A1A1A;
+	padding-top: 50px;
+
+	.successfulCasesTitle2 {
+		font-weight: 500;
+		line-height: 33px;
+		color: rgba(255, 255, 255, 0.8);
+		text-align: center;
+		font-size: 24px;
+		padding: 20px 0;
+	}
+
+	.successfulCasesList {
+		margin: auto;
+		width: 1280px;
+		padding: 24px;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		display: flex;
+
+		.successfulCasesItem {
+			width: 266px;
+
+			.successfulCasesItemImg {
+				display: block;
+				width: 100%;
+			}
+
+			.successfulCasesItemDesc {
+				padding: 18px 0;
+				text-align: center;
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+
+	@media screen and  (max-width: 750px) {
+		padding-top: .4rem;
+		.successfulCasesTitle2 {
+			line-height: .25rem;
+			font-size: .24rem;
+			padding: .2rem 0;
+		}
+
+		.successfulCasesList {
+			width: 100%;
+			padding: .24rem;
+
+			.successfulCasesItem {
+				width: 3rem;
+				.successfulCasesItemDesc{
+					font-size: .16rem;
+					padding: .18rem 0 .24rem;
+				}
+			}
+		}
+	}
+}
