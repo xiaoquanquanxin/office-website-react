@@ -115,6 +115,14 @@ export function requestGetAboutUs() {
     });
 }
 
+//  车载生态-方案合作伙伴
+export function requestEcologyPartner(){
+    return request({
+        url: '/api/getecologypartner',
+        method: 'get',
+    });
+}
+
 //  表单提交
 export function requestSave({
     content,
