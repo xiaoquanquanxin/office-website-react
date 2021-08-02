@@ -87,8 +87,6 @@ export default connect(
                         //  产品套件
                         const productSuiteData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
                         const supportScenarioData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
-                        //  按rank排序
-                        navSortByRank(supportScenarioData, 'rank');
 
                         //  设置初始的默认值-支持场景
                         const { setSupportScenarioActiveData, setDevelopmentProcessData } = this.props;
