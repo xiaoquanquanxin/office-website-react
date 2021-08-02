@@ -1,34 +1,52 @@
 .developmentProcess {
-	background: #F5FAFE;
-	padding-top: 70px ;
-	.tabList {
-		margin: auto;
-		width: 1280px;
-		display: flex;
-		justify-content: space-around;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background: #F5FAFE;
+    padding-top: 70px;
 
-		.tab {
-			text-align: center;
-			width: 235px;
-			font-size: 24px;
-			font-weight: 500;
-			color: rgba(0, 0, 0, 0.6);
-			line-height: 70px;
-			border-bottom: 4px solid transparent;
-			cursor: pointer;
+    .tabList {
+        margin: auto;
+        width: 1280px;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-			&.activeTab {
-				color: var(--black);
-				border-bottom: 4px solid #0B60FA;
-			}
-		}
-	}
+        .tab {
+            text-align: center;
+            width: 235px;
+            font-size: 24px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 70px;
+            border-bottom: 4px solid transparent;
+            cursor: pointer;
+
+            &.activeTab {
+                color: var(--black);
+                border-bottom: 4px solid #0B60FA;
+            }
+        }
+    }
+
+    .img {
+        width: 1280px;
+        display: block;
+        margin: auto;
+    }
 
 
-	.img {
-		width: 1280px;
-		display: block;
-		margin: auto;
-	}
+    @media screen and  (max-width: 750px) {
+        padding-top: .4rem;
+        .tabList {
+            width: 100%;
+
+            .tab {
+                width: 2.4rem;
+                font-size: .18rem;
+                line-height: .6rem;
+            }
+        }
+
+        .img {
+            width: 100%;
+        }
+    }
 }
