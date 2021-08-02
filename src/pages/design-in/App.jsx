@@ -83,18 +83,21 @@ export default connect(
                 requestGetImgTitle(DESIGNIN.name)
                     .then(data => {
                         const { setSupportScenarioActiveData, setDevelopmentProcessData } = this.props;
+                        //  四个一块的
+                        const cdrbData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+                        //  产品套件
+                        const productSuiteData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+
+                        //  支持场景
+                        let supportScenarioData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+                        //  设置初始的默认值
+                        setSupportScenarioActiveData(supportScenarioData[0]);
+
                         //  开发流程
                         const developmentProcessData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
                         //  设置初始的默认值
                         setDevelopmentProcessData(developmentProcessData[0]);
-                        //  支持场景
-                        const supportScenarioData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
-                        //  设置初始的默认值
-                        setSupportScenarioActiveData(supportScenarioData[0]);
-                        //  产品套件
-                        const productSuiteData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
-                        //  四个一块的
-                        const cdrbData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+
                         this.setState((state) => {
                             return {
                                 //  四个一块的
