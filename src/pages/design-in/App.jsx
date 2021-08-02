@@ -4,7 +4,7 @@ import { BasicFooter } from '@components/basicFooter';
 import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
 import {
-    requestEcologyPartner,
+    requestEcologyPartner, requestGetClientCase,
     requestGetImgTitle,
     requestGetPageContent,
 } from '@api';
@@ -108,6 +108,16 @@ export default connect(
                                 developmentProcessData: Object.assign({}, state.developmentProcessData, { list: developmentProcessData }),
                             };
                         });
+                    }),
+                //  获取图文接口
+                requestGetClientCase(DESIGNIN.type)
+                    .then((data) => {
+                        this.setState((state) => {
+                            return {
+                                //  成功案例
+                                successfulCasesData: Object.assign([], state.successfulCasesData, {list: data})
+                            }
+                        })
                     }),
                 //  生态合作伙伴
                 requestEcologyPartner()
