@@ -33,9 +33,9 @@ export const ProductSuite = connect(
 //  每一项
 const ProductSuiteItem = ({data}) => {
     return (
-        <div className={style.productSuiteItem}>
+        <a href={data.more} className={style.productSuiteItem}>
             <img className={style.productSuiteImg} src={data.img} alt=""/>
-            <a href={data.more} className={style.productSuiteParagraph}>
+            <div className={style.productSuiteParagraph}>
                 <p className={style.productSuiteTitle}
                    dangerouslySetInnerHTML={{__html: data.title}}/>
                 <p className={style.productSuiteDesc} dangerouslySetInnerHTML={{__html: data.desc}}/>
@@ -43,7 +43,7 @@ const ProductSuiteItem = ({data}) => {
                     <div className={style.productSuiteViewDetailText}>查看详情</div>
                     <img className={style.productSuiteViewDetailSvg} src={viewDetail} alt=''/>
                 </div>
-            </a>
-        </div>
+            </div>
+        </a>
     );
 };
