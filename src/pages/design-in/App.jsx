@@ -157,6 +157,7 @@ export default connect(
                     <SupportScenario supportScenarioData={supportScenarioData}/>
                     {/*开发流程*/}
                     <DevelopmentProcess developmentProcessData={developmentProcessData}/>
+                    <div id="m2" pc={60}/>
                     {/*成功案例*/}
                     <SuccessfulCases successfulCasesData={successfulCasesData}/>
                     {/*方案合作伙伴*/}
@@ -166,7 +167,6 @@ export default connect(
                         title={programPartners && programPartners.title}
                         styleType={3}
                     />
-                    <div id="m2" pc={60}/>
                     {/*更多*/}
                     <GetMoreBox isGrey={true}/>
                     {/*表单*/}
