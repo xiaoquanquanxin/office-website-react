@@ -1,74 +1,78 @@
 .productSuite {
-	background: #131313;
-	color: var(--white);
-	padding-top: 70px;
+    background: #131313;
+    padding-top: 70px;
 
-	.productSuiteContent {
-		width: 1080px;
-		margin: auto;
-		padding: 60px 0 84px;
-		display: flex;
-		justify-content: space-between;
-		align-content: center;
+    .productSuiteContent {
+        width: 1080px;
+        margin: auto;
+        padding: 60px 0 84px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
 
-		//  每一项
-		.productSuiteItem {
-			width: 510px;
-			background: #292929;
-			box-shadow: 0 3px 6px 0 rgba(46, 46, 46, 0.5);
-			border-radius: 2px;
+        //  每一项
+        .productSuiteItem {
+            width: 510px;
+            background: #292929;
+            box-shadow: 0 3px 6px 0 rgba(46, 46, 46, 0.5);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: transform 100ms;
+            transform: translateY(10px);
 
-			&:last-child {
-				margin-top: 10px;
-			}
+            &:hover {
+                transform: translateY(0);
+            }
 
-			.productSuiteImg {
-				display: block;
-				width: 100%;
-			}
+            .productSuiteImg {
+                display: block;
+                width: 100%;
+            }
 
-			.productSuiteParagraph {
-				padding: 30px 24px 13px;
+            .productSuiteParagraph {
+                display: block;
+                padding: 30px 24px 13px;
+                color: var(--white);
 
 
-				.productSuiteTitle {
-					font-size: 24px;
-					font-weight: 500;
-					line-height: 22px;
-				}
+                .productSuiteTitle {
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 22px;
+                }
 
-				.productSuiteDesc {
-					font-size: 16px;
-					line-height: 26px;
-					opacity: .7;
-					padding-top: 14px;
-					padding-bottom: 4px;
-				}
+                .productSuiteDesc {
+                    font-size: 16px;
+                    line-height: 26px;
+                    opacity: .7;
+                    padding-top: 14px;
+                    padding-bottom: 4px;
+                }
 
-				//  查看详情
-				.productSuiteViewDetail {
-					display: flex;
-					justify-content: flex-end;
-					align-items: center;
+                //  查看详情
+                .productSuiteViewDetail {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
 
-					.productSuiteViewDetailText {
-						font-size: 16px;
-						font-weight: 500;
-						color: #0B60FA;
-						line-height: 21px;
-						background: linear-gradient(270deg, #0067FF 0%, #009EFF 100%);
-						-webkit-background-clip: text;
-						-webkit-text-fill-color: transparent;
-					}
+                    .productSuiteViewDetailText {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #0B60FA;
+                        line-height: 21px;
+                        background: linear-gradient(270deg, #0067FF 0%, #009EFF 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
 
-					.productSuiteViewDetailSvg {
-						width: 13px;
-						height: 13px;
-						display: block;
-					}
-				}
-			}
+                    .productSuiteViewDetailSvg {
+                        width: 13px;
+                        height: 13px;
+                        display: block;
+                    }
+                }
+            }
 
-		}
-	}
+        }
+    }
 }

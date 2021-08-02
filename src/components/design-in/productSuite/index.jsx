@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './index.module.less';
-import { BasicTitleDesc } from '@components/basicTitleDesc';
-import { connect } from 'react-redux';
-import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
+import {BasicTitleDesc} from '@components/basicTitleDesc';
+import {connect} from 'react-redux';
+import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
 import viewDetail from '@media/design-in/viewDetail.png';
 
 console.log(viewDetail);
@@ -10,7 +10,7 @@ console.log(viewDetail);
 export const ProductSuite = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(({ productSuiteData }) => {
+)(({productSuiteData}) => {
     if (!productSuiteData) {
         return null;
     }
@@ -30,23 +30,19 @@ export const ProductSuite = connect(
 });
 
 //  每一项
-const ProductSuiteItem = ({ data }) => {
+const ProductSuiteItem = ({data}) => {
     return (
         <div className={style.productSuiteItem}>
             <img className={style.productSuiteImg} src={data.img} alt=""/>
-            <div className={style.productSuiteParagraph}>
+            <a href={data.more} className={style.productSuiteParagraph}>
                 <p className={style.productSuiteTitle}
-                   dangerouslySetInnerHTML={{ __html: data.title }}/>
-                <p className={style.productSuiteDesc} dangerouslySetInnerHTML={{ __html: data.desc }}/>
-                {
-                    data.more && (
-                        <a href={data.more} className={style.productSuiteViewDetail}>
-                            <div className={style.productSuiteViewDetailText}>查看详情</div>
-                            <img className={style.productSuiteViewDetailSvg} src={viewDetail} alt=''/>
-                        </a>
-                    )
-                }
-            </div>
+                   dangerouslySetInnerHTML={{__html: data.title}}/>
+                <p className={style.productSuiteDesc} dangerouslySetInnerHTML={{__html: data.desc}}/>
+                <div className={style.productSuiteViewDetail}>
+                    <div className={style.productSuiteViewDetailText}>查看详情</div>
+                    <img className={style.productSuiteViewDetailSvg} src={viewDetail} alt=''/>
+                </div>
+            </a>
         </div>
     );
 };
