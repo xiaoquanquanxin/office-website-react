@@ -52,8 +52,7 @@ export const JOURNEY5 = {name: '征程5',};
 //  matrix5
 export const MATRIX5 = {name: 'Matrix5', type: 119};
 
-//  车载生态
-//  todo    参数？？
+//  车载生态      没有客户案例
 export const DESIGNIN = {name: '车载生态'};
 
 //  页面pathName
