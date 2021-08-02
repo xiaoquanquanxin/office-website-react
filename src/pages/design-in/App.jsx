@@ -11,7 +11,8 @@ import {
 import {
     clipData,
     commonRelativeWideFn,
-    getBrowserInfo, navSortByRank,
+    getBrowserInfo,
+    navSortByRank,
 } from '@utils/utils';
 import { BannerManage } from '@components/bannerManage';
 import { ScrollFixed } from '@components/scrollFixed';
@@ -90,6 +91,7 @@ export default connect(
 
                         //  支持场景
                         let supportScenarioData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
+                        navSortByRank(supportScenarioData,'rank');
                         //  设置初始的默认值
                         setSupportScenarioActiveData(supportScenarioData[0]);
 
