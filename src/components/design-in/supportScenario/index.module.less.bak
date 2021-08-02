@@ -1,0 +1,115 @@
+.supportScenario {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~@media/design-in/supportScenarioBg@2x.png);
+
+    .supportScenarioContent {
+        width: 1080px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 74px;
+
+        //  左侧菜单
+        .leftSideMenuData {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.7);
+
+            .leftItem {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25px;
+                padding: 29px 32px 25px 36px;
+
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                color: rgba(0, 0, 0, 0.65);
+                position: relative;
+
+                &.leftItemActive {
+                    background: linear-gradient(to right, rgba(11, 96, 250, 0.30) 0%, rgba(26, 153, 253, 0) 60%, rgba(26, 153, 253, 0) 100%);
+                    color: #0B60FA;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 8px;
+                        background: #0B60FA;
+                    }
+                }
+            }
+        }
+
+        //  右侧内容
+        .rightSideContent {
+            width: 770px;
+
+            .desc {
+                height: 25px;
+                font-size: 18px;
+                margin-bottom: 12px;
+                line-height: 18px;
+            }
+
+            .img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 750px) {
+        padding-top: .4rem;
+        padding-bottom: .3rem;
+        background-image: url(~@media/design-in/supportScenarioBg.png);
+        .supportScenarioContent {
+            width: 6.5rem;
+            padding-top: .4rem;
+            display: block;
+
+            .leftSideMenuData {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .leftItem {
+                    word-break: break-all;
+                    font-size: .12rem;
+                    line-height: .24rem;
+                    padding: .1rem .05rem;
+
+                    &.leftItemActive {
+                        background: linear-gradient(to bottom, rgba(11, 96, 250, 0.30) 0%, rgba(26, 153, 253, 0) 60%, rgba(26, 153, 253, 0) 100%);
+
+                        &::before {
+                            width: 100%;
+                            height: .05rem;
+                        }
+                    }
+                }
+            }
+
+            .rightSideContent {
+                width: 100%;
+
+                .desc {
+                    height: .3rem;
+                    font-size: .12rem;
+                    margin: .2rem 0;
+                    line-height: .2rem;
+                }
+            }
+        }
+    }
+}
+
