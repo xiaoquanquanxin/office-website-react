@@ -159,7 +159,6 @@ export default connect(
                     {/*成功案例*/}
                     <SuccessfulCases successfulCasesData={successfulCasesData}/>
                     {/*方案合作伙伴*/}
-                    {/*合作伙伴*/}
                     <AdvertisementBanner
                         data={programPartners && programPartners.list}
                         title={programPartners && programPartners.title}
