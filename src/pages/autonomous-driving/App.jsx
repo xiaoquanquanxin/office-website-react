@@ -57,7 +57,6 @@ export default connect(
                 //  获取页面文案接口
                 requestGetPageContent(AUTONOMOUS_DRIVING.name)
                     .then(data => {
-                        navSortByRank(data, 'id');
                         setJSONData(data[0]);
                         setJSONData(data[1]);
                         setJSONData(data[2]);
