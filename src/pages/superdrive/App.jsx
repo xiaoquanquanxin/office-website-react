@@ -71,11 +71,10 @@ export default connect(
                 //  获取图片标题接口
                 requestGetImgTitle(SUPERDRIVE.name)
                     .then(data => {
-                        //  Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾
-                        const manMachineCoDrivingData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
                         //  超级驾驶二级banner
                         const superDriveSubBannerData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
-                        //  console.log(superDriveSubBannerData);
+                        //  Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾
+                        const manMachineCoDrivingData = clipData(data, NAV_CAT_ID, data[0][NAV_CAT_ID]);
                         this.setState((state) => {
                             return {
                                 //  Horizon Matrix 超级驾驶解决方案<br/>实现全场景自动驾驶 & 人机共驾
