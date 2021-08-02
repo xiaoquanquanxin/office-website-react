@@ -45,15 +45,15 @@ export const SUNRISE3 = {name: '旭日3', type: 122};
 //  omni
 export const OMNI = {name: 'omni', type: 141};
 //  超级驾驶      没有客户案例
-export const SUPERDRIVE = {name: 'superdrive', };
+export const SUPERDRIVE = {name: 'superdrive'};
 //  征程5      没有客户案例
 export const JOURNEY5 = {name: '征程5',};
 
 //  matrix5
 export const MATRIX5 = {name: 'Matrix5', type: 119};
 
-//  车载生态      没有客户案例
-export const DESIGNIN = {name: '车载生态'};
+//  车载生态
+export const DESIGNIN = {name: '车载生态', type: 176};
 
 //  页面pathName
 export const pathNameList = [
