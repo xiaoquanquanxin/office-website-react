@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
 import viewDetail from '@media/design-in/viewDetail.png';
 
+//  todo    给一下图？
 console.log(viewDetail);
 //  产品套件
 export const ProductSuite = connect(
