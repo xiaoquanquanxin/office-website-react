@@ -64,7 +64,6 @@ export default connect(
                 //  获取页面文案接口
                 requestGetPageContent(DESIGNIN.name)
                     .then(data => {
-                        console.log(data);
                         this.setState((state) => {
                             return {
                                 //  产品套件
@@ -113,7 +112,6 @@ export default connect(
                 //  生态合作伙伴
                 requestEcologyPartner()
                     .then(({ data }) => {
-                        console.log(data);
                         this.setState((state) => {
                             return {
                                 //  方案合作伙伴
@@ -148,7 +146,7 @@ export default connect(
                     <ScrollFixed RenderElement={FixedBarBox}/>
                     <div id="m1" pc={60} mobile={80}/>
                     {/*轮播*/}
-                    <BannerManage bannerType={23}/>
+                    <BannerManage bannerType={26}/>
                     {/*四个一块*/}
                     <FourBlocks data={cdrbData} isLight={true}/>
                     {/*产品套件*/}
