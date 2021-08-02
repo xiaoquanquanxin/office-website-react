@@ -164,7 +164,7 @@ export function requestGetPageContent(name) {
         params: { name },
     })
         .then(v => {
-            navSortByRank(v.data, 'rank');
+            navSortByRank(v.data, 'nav_cat_id');
             return v.data;
         });
 }
@@ -177,7 +177,7 @@ export function requestGetImgTitle(name) {
         params: { name },
     })
         .then(v => {
-            navSortByRank(v.data, 'rank');
+            navSortByRank(v.data, 'nav_cat_id');
             return v.data;
         });
 }
@@ -190,7 +190,7 @@ export function requestGetClientCase(type) {
         params: { type },
     })
         .then(v => {
-            navSortByRank(v.data, 'rank');
+            navSortByRank(v.data, 'nav_cat_id');
             return v.data;
         });
 }
