@@ -13,10 +13,14 @@
         justify-content: space-between;
         padding-top: 74px;
 
-        //  左侧菜单
-        .leftSideMenuData {
+        .leftWrap {
             width: 280px;
             background: rgba(255, 255, 255, 0.7);
+        }
+
+        //  左侧菜单
+        .leftSideMenuData {
+            width: 100%;
 
             .leftItem {
                 font-size: 18px;
@@ -67,38 +71,51 @@
 
     }
 
-    @media screen and  (max-width: 750px) {
+    @media screen and (max-width: 750px) {
         padding-top: .4rem;
         padding-bottom: .3rem;
         background-image: url(~@media/design-in/supportScenarioBg.png);
         .supportScenarioContent {
-            width: 100%;
+            width: 6.5rem;
             padding-top: .4rem;
+            display: block;
 
-            .leftSideMenuData {
-                width: 1.9rem;
+            .leftWrap {
+                width: 100%;
+                overflow: scroll;
 
-                .leftItem {
-                    font-size: .11rem;
-                    line-height: .24rem;
-                    padding: .12rem .2rem;
+                .leftSideMenuData {
+                    width: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
 
-                    &.leftItemActive {
-                        &::before {
-                            width: .05rem;
+                    .leftItem {
+                        white-space: nowrap;
+                        font-size: .12rem;
+                        line-height: .24rem;
+                        padding: .12rem .2rem;
+
+                        &.leftItemActive {
+                            &::before {
+                                width: .05rem;
+                            }
                         }
                     }
                 }
             }
 
+
             .rightSideContent {
-                width: 5.5rem;
+                width: 100%;
 
                 .desc {
-                    height: .15rem;
-                    font-size: .11rem;
-                    margin-bottom: .15rem;
-                    line-height: .15rem;
+                    display: flex;
+                    align-items: center;
+                    height: .3rem;
+                    font-size: .12rem;
+                    margin: .2rem 0;
+                    line-height: .2rem;
                 }
             }
         }
