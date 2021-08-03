@@ -75,7 +75,7 @@ export const ManMachineCoDriving = connect(
                 <li key={index} className={style.manMachineCoDrivingItem}>
                     <div className={style.manMachineCoDrivingImg}/>
                     <div>
-                        <p className={style.manMachineCoDrivingTitle}>{item.title}</p>
+                        <p className={style.manMachineCoDrivingTitle} dangerouslySetInnerHTML={{__html: item.title}}/>
                         {/*{descList}*/}
                         <p className={style.manMachineCoDrivingDesc}
                            dangerouslySetInnerHTML={{__html: item._desc}}/>
