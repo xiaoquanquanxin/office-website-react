@@ -47,9 +47,9 @@ export const SuperDriveSubBanner = connect(
             return (
                 <li key={index} className={style.superDriveSubBannerItem} style={{backgroundImage: `url(${item.img})`}}>
                     {/*<div className={style.superDriveSubBannerIcon}/>*/}
-                    <p className={style.superDriveSubBannerTitle}>{item.title}</p>
+                    <p className={style.superDriveSubBannerTitle} dangerouslySetInnerHTML={{__html: item.title}}/>
                     {/*<p className={style.superDriveSubBannerSpliter}/>*/}
-                    <p className={style.superDriveSubBannerDesc}>{item.desc}</p>
+                    <p className={style.superDriveSubBannerDesc} dangerouslySetInnerHTML={{__html: item.desc}}/>
                 </li>
             )
         })
