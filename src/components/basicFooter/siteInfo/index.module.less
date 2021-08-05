@@ -86,7 +86,22 @@
 
 		//	底部信息
 		.siteInfoMsg {
-			color: var(--colorddd)
+			color: var(--colorddd);
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			.linkHref {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				margin-left: 8px;
+				color: var(--colorddd);
+			}
+
+			.linkImg {
+				margin-left: 8px;
+			}
 		}
 	}
 }
