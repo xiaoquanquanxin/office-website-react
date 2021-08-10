@@ -91,7 +91,8 @@ export const MenuPC = connect(
             custom: {
                 families: ['PingFang SC Medium'],
                 urls: ['/font.css']
-            }
+            },
+            timeout: 10000000
         });
         const list = navListData.map((item) => {
             return (

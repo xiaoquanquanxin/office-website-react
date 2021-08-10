@@ -4,6 +4,7 @@ import style from './index.module.less';
 import arrowsSrc from '@media/basicHeader/icon-arrow-black.png';
 import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
+import webfontloader from "webfontloader";
 //  每一项
 const MenuListItem = ({
     //  数据
@@ -128,6 +129,14 @@ export const MenuMobile = connect(
         if (!navListData || !navListData.length) {
             return '';
         }
+        //  字体异步加载
+        webfontloader.load({
+            custom: {
+                families: ['PingFang SC Medium'],
+                urls: ['/font.css']
+            },
+            timeout: 10000000
+        });
         const list = navListData.map((item, index) => (
             <MenuListItem
                 key={item.id}
