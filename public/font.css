@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'PingFang SC Medium';
+    src: url(bigFont/pingfangmedium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wf-active * {
+    font-family: 'PingFang SC Medium', "PingFang SC", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+}
