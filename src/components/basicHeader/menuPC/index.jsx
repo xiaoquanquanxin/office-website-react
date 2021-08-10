@@ -3,6 +3,7 @@ import style from './index.module.less';
 import layout from '@css/layout.module.less';
 import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
+import webfontloader from "webfontloader";
 
 //  每一项
 const MenuListItem = ({
@@ -85,6 +86,13 @@ export const MenuPC = connect(
         if (!navListData || !navListData.length) {
             return '';
         }
+        //  字体异步加载
+        webfontloader.load({
+            custom: {
+                families: ['PingFang SC Medium'],
+                urls: ['/font.css']
+            }
+        });
         const list = navListData.map((item) => {
             return (
                 <MenuListItem
