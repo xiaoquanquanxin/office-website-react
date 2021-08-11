@@ -129,14 +129,18 @@ export const MenuMobile = connect(
         if (!navListData || !navListData.length) {
             return '';
         }
-        //  字体异步加载
-        webfontloader.load({
-            custom: {
-                families: ['PingFang SC Medium'],
-                urls: ['/font.css']
-            },
-            timeout: 10000000
-        });
+        //  只执行一次
+        if(!MenuMobile.webfontloader){
+            //  字体异步加载
+            webfontloader.load({
+                custom: {
+                    families: ['PingFang SC Medium'],
+                    urls: ['/font.css']
+                },
+                timeout: 10000000
+            });
+        }
+        MenuMobile.webfontloader = true;
         const list = navListData.map((item, index) => (
             <MenuListItem
                 key={item.id}
