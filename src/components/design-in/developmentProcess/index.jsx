@@ -46,6 +46,9 @@ const Tab = connect(
              onClick={() => {
                  setDevelopmentProcessData(tabData);
              }}
+             onMouseOver={() => {
+                 setDevelopmentProcessData(tabData);
+             }}
         />
     );
 });

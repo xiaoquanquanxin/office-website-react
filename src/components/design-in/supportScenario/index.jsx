@@ -44,6 +44,9 @@ const LeftSideMenu = connect(
                 onClick={() => {
                     setSupportScenarioActiveData(item);
                 }}
+                onMouseOver={() => {
+                    setSupportScenarioActiveData(item);
+                }}
             />
         );
     });
