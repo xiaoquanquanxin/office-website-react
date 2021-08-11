@@ -56,21 +56,21 @@ export default connect(
                 //  获取页面文案接口
                 requestGetPageContent(INTELLIGENT_COCKPIT.name)
                     .then(data => {
-                        setListJSONData(data[0]);
-                        if (data[0].content) {
-                            data[0].content.reverse();
-                        }
                         setListJSONData(data[1]);
+                        if (data[1].content) {
+                              data[1].content.reverse();
+                        }
+                        setListJSONData(data[3]);
                         this.setState((state) => {
                             return {
-                                //  产品架构
-                                productArchitectureData: Object.assign({}, state.productArchitectureData, data[0]),
-                                //  算法库
-                                algorithmsLibraryData: Object.assign({}, state.algorithmsLibraryData, data[1]),
                                 //  方案优势
-                                planAdvantageData: Object.assign({}, state.planAdvantageData, data[2]),
+                                planAdvantageData: Object.assign({}, state.planAdvantageData, data[0]),
+                                //  产品架构
+                                productArchitectureData: Object.assign({}, state.productArchitectureData, data[1]),
                                 //  核心算法介绍
-                                coreAlgorithmData: Object.assign({}, state.coreAlgorithmData, data[3]),
+                                coreAlgorithmData: Object.assign({}, state.coreAlgorithmData, data[2]),
+                                //  算法库
+                                algorithmsLibraryData: Object.assign({}, state.algorithmsLibraryData, data[3]),
                                 //  客户案例
                                 customerCaseData: Object.assign({}, state.customerCaseData, data[4]),
                             };
