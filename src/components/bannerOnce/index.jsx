@@ -1,14 +1,14 @@
 import React from 'react';
-import { requestGetBannerByType } from '@api/index';
-import { navSortByRank } from '@utils/utils';
-import { connect } from 'react-redux';
-import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
+import {requestGetBannerByType} from '@api/index';
+import {navSortByRank} from '@utils/utils';
+import {connect} from 'react-redux';
+import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
 // import { IndexBannerSliderItem } from '@components/bannerOnce/indexBanner';
 // import { AboutBannerSliderItem } from '@components/bannerOnce/aboutBanner';
 // import { AdvertisementSlickItem } from '@components/bannerOnce/advertisementBanner';
 // import { ProjectBannerSliderItem } from '@components/bannerOnce/projectBanner';
-import { MatrixSliderItem } from '@components/bannerOnce/matrixBanner';
-import { ProductSliderItem } from '@components/bannerOnce/productBanner';
+import {MatrixSliderItem} from '@components/bannerOnce/matrixBanner';
+import {ProductSliderItem} from '@components/bannerOnce/productBanner';
 import './index.less'
 
 //  bannerId字符串
@@ -99,7 +99,7 @@ export const BannerOnce = connect(
          * */
         constructor(props) {
             super(props);
-            const { bannerType, setProjectBanner } = props;
+            const {bannerType, setProjectBanner} = props;
             if (!bannerType) {
                 throw new Error(`缺少用于发请求的bannerType${bannerType}`);
             }
@@ -114,7 +114,7 @@ export const BannerOnce = connect(
         }
 
         componentDidMount() {
-            const { bannerType } = this.props;
+            const {bannerType} = this.props;
             //  发请求，取页面数据
             requestGetBannerByType(bannerType)
                 .then(v => {
@@ -129,8 +129,8 @@ export const BannerOnce = connect(
         }
 
         render() {
-            const { sliderItemType, swiperData } = this.state;
-            const { bannerType } = this.props;
+            const {sliderItemType, swiperData} = this.state;
+            const {bannerType} = this.props;
             let SliderItem = null;
             switch (sliderItemType) {
                 // case 1: //  首页banner
