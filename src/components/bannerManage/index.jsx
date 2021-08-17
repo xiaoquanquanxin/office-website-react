@@ -29,7 +29,6 @@ export const BannerManage = connect(
             //  核心技术、天工开物、自动驾驶
             6: 4,
             12: 4,
-            14: 4,
             //  征程2、征程3、旭日2、旭日3
             8: 5,
             21: 5,
@@ -53,6 +52,8 @@ export const BannerManage = connect(
             26: 7,
             //  aiot
             18: 7,
+            //  autonomous-driving
+            14: 7,
         };
         //  功能类似，banner的Id
         //  key: bannerType , value : bannerId
@@ -63,7 +64,6 @@ export const BannerManage = connect(
             //  核心技术、天工开物、自动驾驶
             6: projectBanner,
             12: projectBanner,
-            14: projectBanner,
             //  征程2、征程3、旭日2、旭日3
             8: productBanner,
             21: productBanner,
@@ -87,14 +87,13 @@ export const BannerManage = connect(
             26: solutionBanner,
             //  aiot
             18: solutionBanner,
-
+            //  autonomous-driving
+            14: solutionBanner,
         };
         //  banner的样式
         bannerStyle = {
             6: 'pb6',
             12: 'pb12',
-
-            14: 'pb14',
 
             //  征程2、征程3、旭日2、旭日3、matrix
             8: 'pb8',
@@ -118,6 +117,8 @@ export const BannerManage = connect(
             26: 'pb19',
             //  aiot
             18: 'pb19',
+            //  autonomous-driving
+            14: 'pb19',
         };
 
         /**
