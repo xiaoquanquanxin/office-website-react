@@ -1,10 +1,10 @@
 import React from 'react';
-import { requestGetBannerByType } from '@api/index';
-import { navSortByRank } from '@utils/utils';
-import { CustomSwiper } from '@components/swiper';
+import {requestGetBannerByType} from '@api/index';
+import {navSortByRank} from '@utils/utils';
+import {CustomSwiper} from '@components/swiper';
 import style from './index.module.less';
-import { connect } from 'react-redux';
-import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
+import {connect} from 'react-redux';
+import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
 import './index.less';
 
 //  bannerId字符串
@@ -98,7 +98,7 @@ export const BannerManage = connect(
          * */
         constructor(props) {
             super(props);
-            const { bannerType, setProjectBanner } = props;
+            const {bannerType, setProjectBanner} = props;
             if (!bannerType) {
                 throw new Error(`缺少用于发请求的bannerType${bannerType}`);
             }
@@ -114,7 +114,7 @@ export const BannerManage = connect(
         }
 
         componentDidMount() {
-            const { bannerType } = this.props;
+            const {bannerType} = this.props;
 
             //  发请求，取页面数据
             requestGetBannerByType(bannerType)
@@ -133,8 +133,8 @@ export const BannerManage = connect(
         }
 
         render() {
-            const { swiperData, sliderItemType, bannerId } = this.state;
-            const { bannerType } = this.props;
+            const {swiperData, sliderItemType, bannerId} = this.state;
+            const {bannerType} = this.props;
             let id;
             //  只有征程、旭日2、旭日3、MATRIX有需要背景
             switch (bannerType) {
@@ -153,7 +153,7 @@ export const BannerManage = connect(
             return (
                 <div id={id} className={`${style[id]}`}>
                     <div className={`${style.bannerSwiper} ${this.bannerStyle[bannerType]}`}
-                        id={bannerId}>
+                         id={bannerId}>
                         <div className={style.container}>
                             <CustomSwiper
                                 swiperData={swiperData}
