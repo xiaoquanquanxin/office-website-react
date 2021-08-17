@@ -10,6 +10,7 @@ import {AdvertisementSlickItem} from '@components/bannerManage/advertisementBann
 import {ProjectBannerSliderItem} from '@components/bannerManage/projectBanner';
 import {ProductSlickItem} from '@components/bannerManage/productBanner';
 import {MatrixSliderItem} from '@components/bannerManage/matrixBanner';
+import {SolutionBannerSliderItem} from "@components/bannerManage/solutionBanner";
 import 'swiper/dist/css/swiper.css';
 import './index.less';
 
@@ -190,6 +191,7 @@ export const CustomSwiper = connect(
     render() {
         const {swiperData, sliderItemType} = this.props;
         let SliderItem = null;
+        debugger;
         switch (sliderItemType) {
             case 1: //  首页banner
                 SliderItem = IndexBannerSliderItem;
@@ -200,7 +202,7 @@ export const CustomSwiper = connect(
             case 3: //  新闻中心、关于我们
                 SliderItem = AboutBannerSliderItem;
                 break;
-            case 4: //  核心技术、天工开物、高级别辅助驾驶、自动驾驶、智能座舱、高精地图、智能物联网
+            case 4: //  核心技术、天工开物、自动驾驶
                 SliderItem = ProjectBannerSliderItem;
                 break;
             case 5: //  征程、旭日2、旭日3
@@ -208,6 +210,9 @@ export const CustomSwiper = connect(
                 break;
             case 6: //  matrix
                 SliderItem = MatrixSliderItem;
+                break;
+            case 7: //  解决方案下的全部
+                SliderItem = SolutionBannerSliderItem;
                 break;
             default:
                 throw new Error('错误的类型，没有这种类sliderItem');
