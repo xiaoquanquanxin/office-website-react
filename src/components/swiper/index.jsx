@@ -1,15 +1,15 @@
-import React, { createRef } from 'react';
-import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
-import { connect } from 'react-redux';
+import React, {createRef} from 'react';
+import {mapDispatchToProps, mapStateToProps} from '@store/reduxMap';
+import {connect} from 'react-redux';
 import Swiper from 'swiper';
-import { resizeListener } from '@utils/eventListener';
-import { FRAME_DELAY } from '@utils/constant';
-import { IndexBannerSliderItem } from '@components/bannerManage/indexBanner';
-import { AboutBannerSliderItem } from '@components/bannerManage/aboutBanner';
-import { AdvertisementSlickItem } from '@components/bannerManage/advertisementBanner';
-import { ProjectBannerSliderItem } from '@components/bannerManage/projectBanner';
-import { ProductSlickItem } from '@components/bannerManage/productBanner';
-import { MatrixSliderItem } from '@components/bannerManage/matrixBanner';
+import {resizeListener} from '@utils/eventListener';
+import {FRAME_DELAY} from '@utils/constant';
+import {IndexBannerSliderItem} from '@components/bannerManage/indexBanner';
+import {AboutBannerSliderItem} from '@components/bannerManage/aboutBanner';
+import {AdvertisementSlickItem} from '@components/bannerManage/advertisementBanner';
+import {ProjectBannerSliderItem} from '@components/bannerManage/projectBanner';
+import {ProductSlickItem} from '@components/bannerManage/productBanner';
+import {MatrixSliderItem} from '@components/bannerManage/matrixBanner';
 import 'swiper/dist/css/swiper.css';
 import './index.less';
 
@@ -25,6 +25,7 @@ export const CustomSwiper = connect(
     swiperRef;
     //  定时器
     timer;
+
     /**
      * props：
      * swiperData:数据
@@ -56,7 +57,7 @@ export const CustomSwiper = connect(
 
     //  更新props数据
     componentDidUpdate(prevProps, a, b) {
-        const { swiperData, REDUCER_BROWSER_INFO } = this.props;
+        const {swiperData, REDUCER_BROWSER_INFO} = this.props;
         //  如果数据一样
         if (swiperData === prevProps.swiperData) {
             return;
@@ -85,7 +86,7 @@ export const CustomSwiper = connect(
 
     //  初始化swiper，构造函数销毁、点的数组的长度、定时器重置
     initMySwiper() {
-        const { swiperData, autoHeight } = this.props;
+        const {swiperData, autoHeight} = this.props;
         if (this.mySwiper) {
             this.mySwiper.destroy();
             this.paginRefs.length = 0;
@@ -116,15 +117,15 @@ export const CustomSwiper = connect(
 
     //  分页计时器变换
     transform() {
-        const { status } = this.state;
+        const {status} = this.state;
         if (status !== 1) {
             return;
         }
         if (this.paginRefs.length === 0) {
             return;
         }
-        const { swiperData, basicDelay } = this.props;
-        const { realIndex } = this.mySwiper;
+        const {swiperData, basicDelay} = this.props;
+        const {realIndex} = this.mySwiper;
 
         //  激活的i元素
         const activeElement = this.paginRefs[realIndex].current;
@@ -187,7 +188,7 @@ export const CustomSwiper = connect(
     }
 
     render() {
-        const { swiperData, sliderItemType } = this.props;
+        const {swiperData, sliderItemType} = this.props;
         let SliderItem = null;
         switch (sliderItemType) {
             case 1: //  首页banner
@@ -221,23 +222,23 @@ export const CustomSwiper = connect(
                             (item, index) => {
                                 return (
                                     <div key={item.id || index} className="swiper-slide">
-                                        <SliderItem data={item} />
+                                        <SliderItem data={item}/>
                                     </div>
                                 );
                             })
                     ) || ''}
                 </div>
                 {swiperData && swiperData.length > 1 &&
-                    <div className={`swiper-pagination-custom`}>
-                        {
-                            swiperData.map(
-                                (item, index) => {
-                                    return (
-                                        <span key={item.id || index} ref={this.paginRefs[index]}><i /></span>
-                                    );
-                                })
-                        }
-                    </div>
+                <div className={`swiper-pagination-custom`}>
+                    {
+                        swiperData.map(
+                            (item, index) => {
+                                return (
+                                    <span key={item.id || index} ref={this.paginRefs[index]}><i/></span>
+                                );
+                            })
+                    }
+                </div>
                 }
             </div>
         );
