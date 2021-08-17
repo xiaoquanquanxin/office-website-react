@@ -94,10 +94,7 @@ export const BannerManage = connect(
             6: 'pb6',
             12: 'pb12',
 
-            13: 'pb13',
             14: 'pb14',
-            16: 'pb16',
-            17: 'pb17',
 
             //  征程2、征程3、旭日2、旭日3、matrix
             8: 'pb8',
@@ -106,11 +103,21 @@ export const BannerManage = connect(
             11: 'pb11',
             21: 'pb21',
 
-            //  aiot、omni、superdrive、车辆生态
-            18: 'pb18',
-            22: 'pb18',
-            23: 'pb18',
-            26: 'pb18',
+            //  解决方案下的全部
+            //  adas
+            13: 'pb19',
+            //  navinet
+            17: 'pb19',
+            //  superdrive
+            23: 'pb19',
+            //  omni
+            22: 'pb19',
+            //  intelligent-cockpit
+            16: 'pb19',
+            //  design-in
+            26: 'pb19',
+            //  aiot
+            18: 'pb19',
         };
 
         /**
