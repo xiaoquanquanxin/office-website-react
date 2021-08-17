@@ -29,7 +29,7 @@ export const BannerOnce = connect(
             //  关于我们、新闻中心
             4: 3,
             5: 3,
-            //  核心技术、天工开物、自动驾驶
+            //  核心技术、天工开物
             6: 4,
             12: 4,
             13: 4,
@@ -53,7 +53,7 @@ export const BannerOnce = connect(
             //  关于我们、新闻中心
             4: aboutBanner,
             5: aboutBanner,
-            //  核心技术、天工开物、自动驾驶
+            //  核心技术、天工开物
             6: projectBanner,
             12: projectBanner,
             13: projectBanner,
@@ -142,7 +142,7 @@ export const BannerOnce = connect(
                 // case 3: //  新闻中心、关于我们
                 //     SliderItem = AboutBannerSliderItem;
                 //     break;
-                // case 4: //  核心技术、天工开物、自动驾驶
+                // case 4: //  核心技术、天工开物
                 //     SliderItem = ProjectBannerSliderItem;
                 //     break;
                 case 5: //  征程2、征程3、旭日2、旭日3、征程5

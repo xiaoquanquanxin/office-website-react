@@ -26,7 +26,7 @@ export const BannerManage = connect(
             //  关于我们、新闻中心
             4: 3,
             5: 3,
-            //  核心技术、天工开物、自动驾驶
+            //  核心技术、天工开物
             6: 4,
             12: 4,
             //  征程2、征程3、旭日2、旭日3
@@ -61,7 +61,7 @@ export const BannerManage = connect(
             //  关于我们、新闻中心
             4: aboutBanner,
             5: aboutBanner,
-            //  核心技术、天工开物、自动驾驶
+            //  核心技术、天工开物
             6: projectBanner,
             12: projectBanner,
             //  征程2、征程3、旭日2、旭日3
