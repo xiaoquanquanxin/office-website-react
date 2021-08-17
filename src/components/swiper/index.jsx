@@ -191,7 +191,6 @@ export const CustomSwiper = connect(
     render() {
         const {swiperData, sliderItemType} = this.props;
         let SliderItem = null;
-        debugger;
         switch (sliderItemType) {
             case 1: //  首页banner
                 SliderItem = IndexBannerSliderItem;
