@@ -91,7 +91,7 @@
 		//	子列表
 		.navLevel2 {
 			display: none;
-			width: calc(100% + 100px);
+			min-width: calc(100% + 100px);
 			position: absolute;
 			left: 50%;
 			top: 64px;
@@ -105,6 +105,8 @@
 			& > dd {
 				text-align: center;
 				position: relative;
+				padding: 0 10px;
+				white-space: nowrap;
 
 				a {
 					display: block;
@@ -143,11 +145,13 @@
 					position: absolute;
 					left: 100%;
 					top: 0;
-					width: 100%;
+					min-width: 100%;
 					background: var(--white);
 					box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
 
 					dd {
+						padding: 0 10px;
+						white-space: nowrap;
 						//	路由匹配，激活的三级目录，与hover效果相当			问题4
 						&.navLevel3Active, &:hover {
 							background: var(--colorf6f6f6);
