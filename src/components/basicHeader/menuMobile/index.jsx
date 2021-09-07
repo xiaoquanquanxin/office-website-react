@@ -40,7 +40,7 @@ const MenuListItem = ({
             <a href={data.url}
                 target={data.is_out ? '_blank' : '_self'}
                 onClick={() => (primaryMenuClick(index))}
-            >{data.name}</a>
+            ><span dangerouslySetInnerHTML={{__html: data.name}}/></a>
             {arrowsElements}
             {subListElements}
         </li>
@@ -76,7 +76,9 @@ const NavLevel2 = ({
             <dd key={item.id} className={(item.isActive || isEventActive) ? style.navLevel2Active : ''}>
                 <a href={item.url}
                     target={item.target}
-                    onClick={() => (secondaryMenuClick(index))}>{item.name}</a>
+                    onClick={() => (secondaryMenuClick(index))}>
+                    <span dangerouslySetInnerHTML={{__html: item.name}}/>
+                </a>
                 {arrowsElements}
                 {subListElements}
             </dd>

@@ -23,7 +23,9 @@ const MenuListItem = ({
             className={`${isActive ? style.activeColor : ''} ${style.menuListItem}`}
             onClick={() => sessionStorage.setItem('menu-click', '1')}
         >
-            <a href={href} target={target}>{content}</a>
+            <a href={href} target={target}>
+                <span dangerouslySetInnerHTML={{__html: content}}/>
+            </a>
             {subList ? <NavLevel2 subList={subList} /> : ''}
         </li>
     );
@@ -39,7 +41,9 @@ const NavLevel2 = ({
                 key={item.id} className={item.isActive ? style.navLevel2Active : ''}
                 onClick={() => sessionStorage.setItem('menu-click', '1')}
             >
-                <a href={item.url} target={item.target}>{item.name}</a>
+                <a href={item.url} target={item.target}>
+                    <span dangerouslySetInnerHTML={{__html: item.name}}/>
+                </a>
                 {item.son ? <NavLevel3 lowestList={item.son} /> : ''}
             </dd>
         );
