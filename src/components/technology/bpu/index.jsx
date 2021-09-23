@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from '@store/reduxMap';
 import { FRAME_DELAY } from '@utils/constant';
 import { BasicTitleDesc } from '@components/basicTitleDesc';
+import {replaceRN} from "@utils/utils";
 
 export const Bpu = connect(
     mapStateToProps,
@@ -104,9 +105,7 @@ const BpuItem = ({
     setActive,
 }) => {
     if (bpuData.desc) {
-        bpuData._desc = bpuData.desc
-            .replace(/(\r)/ig, '\n')
-            .replace(/\n\n/ig, '<br/>');
+        bpuData._desc = replaceRN(bpuData.desc);
     }
     return (
         <li className={`${style.item} ${index === activeIndex ? style.active : ''}`}
